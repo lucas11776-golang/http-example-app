@@ -31,7 +31,7 @@ func Test() {
 		"height": Where{">": 5.7},
 	}).Limit(50).Get()
 
-	fmt.Println("Model")
+	fmt.Println("")
 }
 
 type User struct {
@@ -161,7 +161,7 @@ func (ctx *Model) Get() (interface{}, error) {
 		return nil, err
 	}
 
-	fmt.Printf("QUERY\r\n\r\n%s\r\n\r\n", sql)
+	fmt.Printf("QUERY\r\n\r\n\r\n%s\r\n\r\n", sql)
 
 	return nil, nil
 }

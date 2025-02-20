@@ -11,7 +11,9 @@ func main() {
 
 	query.Test()
 
-	fmt.Printf("Server Running %s", server.Host())
+	fmt.Printf("")
+	// fmt.Printf("Server Running %s", server.Host())
 
-	server.Listen()
+	server.Close()
+	// server.Listen()
 }
