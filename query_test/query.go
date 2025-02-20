@@ -34,6 +34,26 @@ func Test() {
 	fmt.Println("")
 }
 
+type Entity interface{}
+type Query map[string]interface{}
+
+type Pagination struct {
+	Total   int64    `json:"total"`
+	Page    int64    `json:"page"`
+	PerPage int      `json:"per_page"`
+	Items   []Entity `json:"items"`
+	Query   Query
+}
+
+type Database interface {
+	Connection(name string) Database
+	Select(name string) Database
+	Where(name string) Database
+	Limit(name string) Database
+	Get() []Entity
+	Pagination(name string) *Pagination
+}
+
 type User struct {
 	*Model
 	ID        string    `orm_name:"id" orm_type:"primary_key"`
@@ -115,6 +135,10 @@ func (ctx *QueryBuilder) WhereStatement() (string, error) {
 			break
 
 		case Where:
+
+			break
+
+		case func() Where:
 
 			break
 
