@@ -8,6 +8,7 @@ import (
 	"github.com/lucas11776-golang/http"
 )
 
+// TESTCASE HAS CHANGE...
 // TODO Refactor HTTP to support application testing.
 type Testing struct {
 	HTTP *http.HTTP
@@ -25,8 +26,6 @@ func (ctx *Testing) Cleanup() {
 
 // TODO Looks like the structure meant work
 func TestCase(t *testing.T) *Testing {
-	bootstrap.PORT = 0
-
 	testing := &Testing{HTTP: bootstrap.Boot()}
 
 	go testing.Run()

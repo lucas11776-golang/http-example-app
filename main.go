@@ -3,17 +3,15 @@ package main
 import (
 	"fmt"
 	"server/bootstrap"
-	query "server/query_test"
+	"server/env"
 )
 
 func main() {
+	env.Load(".env")
+
 	server := bootstrap.Boot()
 
-	query.Test()
+	fmt.Printf("\r\nRunning Server %s:%d\r\n", env.Env("HOST"), env.EnvInt("PORT"))
 
-	fmt.Printf("")
-	// fmt.Printf("Server Running %s", server.Host())
-
-	server.Close()
-	// server.Listen()
+	server.Listen()
 }

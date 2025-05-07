@@ -2,20 +2,19 @@ package bootstrap
 
 import (
 	"server/app/controllers"
+	"server/env"
 	"server/routes"
 
 	"github.com/lucas11776-golang/http"
 )
 
-var (
-	ADDRESS = "127.0.0.1"
-	PORT    = 8080
-)
-
+// Comment
 func Boot() *http.HTTP {
-	server := http.Server("127.0.0.1", 8080)
+	server := http.Server(env.Env("HOST"), env.EnvInt("PORT"))
 
-	server.SetStatic("static").SetView("views", "html")
+	server.SetStatic(env.Env("ASSETS"))
+	server.SetView(env.Env("VIEWS"), env.Env("VIEWS_EXTENSION"))
+	server.Session([]byte(env.Env("SESSION_KEY")))
 
 	server.Route().Group("/", routes.Web)
 	server.Route().Group("api", routes.Api)
