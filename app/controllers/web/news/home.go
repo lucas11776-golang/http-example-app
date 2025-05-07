@@ -1,7 +1,7 @@
 package news
 
 import (
-	newsapi "server/app/Services/news_api"
+	newsapi "server/app/services/news_api"
 	"time"
 
 	"github.com/lucas11776-golang/http"
