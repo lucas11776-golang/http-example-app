@@ -15,19 +15,12 @@ func Home(req *http.Request, res *http.Response) *http.Response {
 		articles = make([]newsapi.Article, 0)
 	}
 
-	// data, _ := json.Marshal(articles)
-
-	// f, _ := os.Create("news.json")
-
-	// f.Write(data)
-
-	// f.Close()
-
 	return res.View("index", http.ViewData{"articles": &articles})
 }
 
 // Comment
 func Category(req *http.Request, res *http.Response) *http.Response {
+	// TODO: Forgot to add params in requests
 	return res.View("category", http.ViewData{})
 }
 
