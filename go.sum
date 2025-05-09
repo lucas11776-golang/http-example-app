@@ -10,6 +10,8 @@ github.com/lucas11776-golang/http v0.0.0-20250416094707-8232822574ac h1:m+8XEmC4
 github.com/lucas11776-golang/http v0.0.0-20250416094707-8232822574ac/go.mod h1:+1JfWA4vV0cV+u25UWqATg8n+ZSABjdbw4euPHQ2lBw=
 github.com/lucas11776-golang/http v0.0.0-20250507145509-14768d798c53 h1:VWRkLOc1Xgqqyk0l8uUdTnIbclqRYIc0p93mWdxyXaE=
 github.com/lucas11776-golang/http v0.0.0-20250507145509-14768d798c53/go.mod h1:+1JfWA4vV0cV+u25UWqATg8n+ZSABjdbw4euPHQ2lBw=
+github.com/lucas11776-golang/http v0.0.0-20250508081634-18879f8b99e4 h1:hf/KcewCYGaliOCxsJbza4dHVOQZhlPzHInfmkJSjkg=
+github.com/lucas11776-golang/http v0.0.0-20250508081634-18879f8b99e4/go.mod h1:+1JfWA4vV0cV+u25UWqATg8n+ZSABjdbw4euPHQ2lBw=
 github.com/open2b/scriggo v0.59.1 h1:LIe3j6DEZPBSikoWISIMpu4P9iCyL5Ck5zqIiQDnPcQ=
 github.com/open2b/scriggo v0.59.1/go.mod h1:XYnYHkW9EdAT1lDNRM3nFv7zISbywe0+xnZHjf5GjZg=
 github.com/open2b/scriggo v0.60.0 h1:jCODGoYDKB2dQfIiWRqSTkutptfrMCOzaotXI8e8ix0=

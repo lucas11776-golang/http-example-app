@@ -34,6 +34,19 @@ type News struct {
 }
 
 // Comment
+func Fetch(search string, category string, limit int) *[]Article {
+	articles, err := TopHeadlines(search, category, limit, time.Now().Format("2006-01-02"))
+
+	if err != nil {
+		articles = make([]Article, 0)
+	}
+
+	// articles := make([]newsapi.Article, 0)
+
+	return &articles
+}
+
+// Comment
 func TopHeadlines(search string, category string, limit int, from string) ([]Article, error) {
 	news, err := Request(Url("top-headlines", search, category, limit, from))
 
@@ -46,7 +59,6 @@ func TopHeadlines(search string, category string, limit int, from string) ([]Art
 
 // Comment
 func Url(topic string, search string, category string, limit int, from string) string {
-
 	query := []string{}
 
 	if search != "" {

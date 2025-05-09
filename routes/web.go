@@ -9,9 +9,7 @@ import (
 // Comment
 func Web(route *http.Router) {
 	route.Get("/", news.Home)
-	route.Group("/", func(route *http.Router) {
-		route.Group("categories", func(route *http.Router) {
-			route.Get("{category}", news.Category)
-		})
+	route.Group("categories", func(route *http.Router) {
+		route.Get("{category}", news.Category)
 	})
 }

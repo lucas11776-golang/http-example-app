@@ -6,7 +6,7 @@ toolchain go1.24.2
 
 require (
 	github.com/joho/godotenv v1.5.1
-	github.com/lucas11776-golang/http v0.0.0-20250507145509-14768d798c53
+	github.com/lucas11776-golang/http v0.0.0-20250508081634-18879f8b99e4
 )
 
 require (
