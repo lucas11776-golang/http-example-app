@@ -14,5 +14,4 @@ func Web(route *http.Router) {
 			route.Get("{category}", news.Category)
 		})
 	})
-	route.Get("{id}", news.Single)
 }

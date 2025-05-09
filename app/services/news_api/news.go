@@ -67,9 +67,6 @@ func Url(topic string, search string, category string, limit int, from string) s
 
 // Comment
 func Request(url string) (*News, error) {
-
-	// fmt.Printf("\r\n%s\r\n", url)
-
 	request, err := http.NewRequest("GET", url, bytes.NewBuffer([]byte{}))
 
 	if err != nil {

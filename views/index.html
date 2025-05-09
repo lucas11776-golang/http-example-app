@@ -20,8 +20,8 @@
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
-    <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet -->
 </head>
 
 <body>
@@ -57,22 +57,21 @@
         </div>
         <div class="row align-items-center bg-white py-3 px-lg-5">
             <div class="col-lg-4">
-                <a href="index.html" class="navbar-brand p-0 d-none d-lg-block">
+                <a href="/" class="navbar-brand p-0 d-none d-lg-block">
                     <h1 class="m-0 display-4 text-uppercase text-primary">Basic<span class="text-secondary font-weight-normal">News</span></h1>
                 </a>
             </div>
             <div class="col-lg-8 text-center text-lg-right">
-                <a href="https://htmlcodex.com"><img class="img-fluid" src="img/ads-728x90.png" alt=""></a>
+                <a><img class="img-fluid" src="img/ads-728x90.png" alt=""></a>
             </div>
         </div>
     </div>
     <!-- Topbar End -->
 
-
     <!-- Navbar Start -->
     <div class="container-fluid p-0">
         <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 px-lg-5">
-            <a href="index.html" class="navbar-brand d-block d-lg-none">
+            <a href="/" class="navbar-brand d-block d-lg-none">
                 <h1 class="m-0 display-4 text-uppercase text-primary">Biz<span class="text-white font-weight-normal">News</span></h1>
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -80,32 +79,30 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav mr-auto py-0">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="/" class="nav-item nav-link active">Home</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Categories</a>
                         <div class="dropdown-menu rounded-0 m-0">
-                            <a href="#" class="dropdown-item">Menu item 1</a>
-                            <a href="#" class="dropdown-item">Menu item 2</a>
-                            <a href="#" class="dropdown-item">Menu item 3</a>
+                            <a href="categories/business" class="dropdown-item">Business</a>
+                            <a href="categories/politics" class="dropdown-item">Politics</a>
+                            <a href="categories/science" class="dropdown-item">Science</a>
+                            <a href="categories/health" class="dropdown-item">Health</a>
+                            <a href="categories/entertainment" class="dropdown-item">Entertainment</a>
+                            <a href="categories/sport" class="dropdown-item">Sport</a>
                         </div>
                     </div>
                 </div>
-                <div class="input-group ml-auto d-none d-lg-flex" style="width: 100%; max-width: 300px;">
-                    <input type="text" class="form-control border-0" placeholder="Keyword">
+                <form class="input-group ml-auto d-none d-lg-flex" style="width: 100%; max-width: 300px;">
+                    <input name="q" type="text" class="form-control border-0" placeholder="Keyword" value="{{ q }}">
                     <div class="input-group-append">
                         <button class="input-group-text bg-primary text-dark border-0 px-3"><i
                                 class="fa fa-search"></i></button>
                     </div>
-                </div>
+                </form>
             </div>
         </nav>
     </div>
     <!-- Navbar End -->
-
-
-
-
-
 
     <!-- News With Sidebar Start -->
     <div class="container-fluid mt-4">
@@ -116,50 +113,42 @@
                         <div class="col-12">
                             <div class="section-title">
                                 <h4 class="m-0 text-uppercase font-weight-bold">Latest News</h4>
-                                <a class="text-secondary font-weight-medium text-decoration-none" href="">View All</a>
                             </div>
                         </div>
-
                         {% var index = 1 %}
                         
                         {% for article in articles %}
-                        <div class="col-lg-6">
-                            <div class="position-relative mb-3">
-                                <img class="img-fluid w-100" src="{{ article.UrlToImage }}" style="object-fit: cover; height: 250px;">
-                                <div class="bg-white border border-top-0 p-4">
-                                    <div class="mb-2">
-                                        <a class="text-body" href=""><small>{{ article.PublishedAt.Format("2006-01-02") }}</small></a>
+                            <div class="col-lg-6">
+                                <div class="position-relative mb-3">
+                                    <img class="img-fluid w-100" src="{{ article.UrlToImage }}" style="object-fit: cover; height: 250px;">
+                                    <div class="bg-white border border-top-0 p-4">
+                                        <div class="mb-2">
+                                            <a class="text-body" href=""><small>{{ article.PublishedAt.Format("2006-01-02") }}</small></a>
+                                        </div>
+                                        <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" target="_blank" href="{{ article.Url }}">
+                                            {{ article.Title }}
+                                        </a>
+                                        <p class="m-0">
+                                            {{ article.Description }}
+                                        </p>
                                     </div>
-                                    <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="">
-                                        {{ article.Title }}
-                                    </a>
-                                    <p class="m-0">
-                                        {{ article.Description }}
-                                    </p>
-                                </div>
-                                <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
-                                    <div class="d-flex align-items-center">
-                                        <small>{{ article.Source.Name }}</small>
+                                    <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
+                                        <div class="d-flex align-items-center">
+                                            <small>{{ article.Source.Name }}</small>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        
-                        {% if index % 4 == 0 %}
-                        <div class="col-lg-12 mb-3">
-                            <a href=""><img class="img-fluid w-100" src="img/ads-728x90.png" alt=""></a>
-                        </div>
-                        {% end %}
+                            
+                            {% if index % 4 == 0 %}
+                            <div class="col-lg-12 mb-3">
+                                <a><img class="img-fluid w-100" src="img/ads-728x90.png" alt=""></a>
+                            </div>
+                            {% end %}
 
-                        {% index += 1 %}
-                        
-                        {% end %}
-
-
-
-
-                        
+                            {% index += 1 %}
+                        {% end %}                        
                     </div>
                 </div>
                 
@@ -204,7 +193,7 @@
                             <h4 class="m-0 text-uppercase font-weight-bold">Advertisement</h4>
                         </div>
                         <div class="bg-white text-center border border-top-0 p-3">
-                            <a href=""><img class="img-fluid" src="img/news-800x500-2.jpg" alt=""></a>
+                            <a><img class="img-fluid" src="img/news-800x500-2.jpg" alt=""></a>
                         </div>
                     </div>
                     <!-- Ads End -->
