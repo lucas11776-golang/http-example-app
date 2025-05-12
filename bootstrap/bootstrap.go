@@ -18,6 +18,7 @@ func Boot() *http.HTTP {
 
 	server.Route().Group("/", routes.Web)
 	server.Route().Group("api", routes.Api)
+	server.Route().Group("graph_ql", routes.GraphQL)
 	server.Route().Group("/", routes.Ws)
 	server.Route().Fallback(controllers.NotFoundPage)
 

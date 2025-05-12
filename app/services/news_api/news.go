@@ -7,6 +7,7 @@ import (
 	"io"
 	"net/http"
 	"server/env"
+	"server/models"
 	"strings"
 	"time"
 )
@@ -34,16 +35,37 @@ type News struct {
 }
 
 // Comment
-func Fetch(search string, category string, limit int) *[]Article {
+func Map(articles []Article, callback func(article Article) models.Article) []models.Article {
+	tranformed := []models.Article{}
+
+	for _, article := range articles {
+		tranformed = append(tranformed, callback(article))
+	}
+
+	return tranformed
+}
+
+// Comment
+func Fetch(search string, category string, limit int) *[]models.Article {
 	articles, err := TopHeadlines(search, category, limit, time.Now().Format("2006-01-02"))
 
 	if err != nil {
 		articles = make([]Article, 0)
 	}
 
-	// articles := make([]newsapi.Article, 0)
+	transformed := Map(articles, func(article Article) models.Article {
+		return models.Article{
+			Publisher:   article.Source.Name,
+			PublishedAt: article.PublishedAt,
+			Image:       article.UrlToImage,
+			Title:       article.Title,
+			Description: article.Description,
+			Content:     article.Content,
+			Url:         article.Url,
+		}
+	})
 
-	return &articles
+	return &transformed
 }
 
 // Comment

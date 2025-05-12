@@ -120,7 +120,7 @@
                         {% for article in articles %}
                             <div class="col-lg-6">
                                 <div class="position-relative mb-3">
-                                    <img class="img-fluid w-100" src="{{ article.UrlToImage }}" style="object-fit: cover; height: 250px;">
+                                    <img class="img-fluid w-100" src="{{ article.Image }}" style="object-fit: cover; height: 250px;">
                                     <div class="bg-white border border-top-0 p-4">
                                         <div class="mb-2">
                                             <a class="text-body" href=""><small>{{ article.PublishedAt.Format("2006-01-02") }}</small></a>
@@ -134,7 +134,7 @@
                                     </div>
                                     <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
                                         <div class="d-flex align-items-center">
-                                            <small>{{ article.Source.Name }}</small>
+                                            <small>{{ article.Publisher }}</small>
                                         </div>
                                     </div>
                                 </div>
