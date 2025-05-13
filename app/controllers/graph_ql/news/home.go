@@ -2,14 +2,14 @@ package news
 
 import (
 	"fmt"
+	"io"
 	newsapi "server/app/services/news_api"
-	"time"
 
 	"github.com/graphql-go/graphql"
 	"github.com/lucas11776-golang/http"
 )
 
-var ArticleType = graphql.NewObject(
+var articleType = graphql.NewObject(
 	graphql.ObjectConfig{
 		Name: "Article",
 		Fields: graphql.Fields{
@@ -38,16 +38,22 @@ var ArticleType = graphql.NewObject(
 	},
 )
 
-var QueryType = graphql.NewObject(
+var queryType = graphql.NewObject(
 	graphql.ObjectConfig{
 		Name: "Query",
 		Fields: graphql.Fields{
 			/* http://{{ host }}/product?query={articles{publisher,published_at,image,title,description,content,url}} */
 			"articles": &graphql.Field{
-				Type:        graphql.NewList(ArticleType),
+				Type:        graphql.NewList(articleType),
 				Description: "Get product list",
 				Args: graphql.FieldConfigArgument{
-					"id": &graphql.ArgumentConfig{
+					"q": &graphql.ArgumentConfig{
+						Type: graphql.String,
+					},
+					"category": &graphql.ArgumentConfig{
+						Type: graphql.String,
+					},
+					"limit": &graphql.ArgumentConfig{
 						Type: graphql.Int,
 					},
 				},
@@ -74,19 +80,9 @@ var QueryType = graphql.NewObject(
 		},
 	})
 
-type Article struct {
-	Publisher   string    `json:"publisher"`
-	PublishedAt time.Time `json:"published_at"`
-	Image       string    `json:"image"`
-	Title       string    `json:"title"`
-	Description string    `json:"description"`
-	Content     string    `json:"content"`
-	Url         string    `json:"url"`
-}
-
 var schema, _ = graphql.NewSchema(
 	graphql.SchemaConfig{
-		Query: QueryType,
+		Query: queryType,
 	},
 )
 
@@ -103,5 +99,7 @@ func execute(query string, schema graphql.Schema) *graphql.Result {
 
 // Comment
 func Endpoint(req *http.Request, res *http.Response) *http.Response {
-	return res.Json(execute(req.URL.Query().Get("query"), schema))
+	query, _ := io.ReadAll(req.Body)
+
+	return res.Json(execute(string(query), schema))
 }

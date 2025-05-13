@@ -10,5 +10,5 @@ import (
 
 // Comment
 func GraphQL(route *http.Router) {
-	route.Get("news", news.Endpoint)
+	route.Post("news", news.Endpoint)
 }
