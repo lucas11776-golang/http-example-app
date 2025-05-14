@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+/<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,13 +7,20 @@
 </head>
 <body>
     <script src="/js/graph_ql.js"></script>
+    <!-- <script src="../static/js/graph_ql.js"></script> -->
     <script>
         const req = Request("articles")
-            .arguments({category: "business"})
+            // .arguments({category: "business"})
             .scheme(['publisher', 'published_at', 'image', 'title', 'description', 'content', 'url'])
+            .scheme(['title'])
             .fetch(`graph_ql/news`)
             .then(data => console.log("Response Data:", data))
             .catch(err => console.log("Response Error:", err))
     </script>
 </body>
 </html>
+
+{
+    "query": "articles  {    publisher,    published_at,    image,    title,    description,    content,    url  }"
+  }
+  

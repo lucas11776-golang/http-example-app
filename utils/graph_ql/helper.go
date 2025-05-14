@@ -2,6 +2,7 @@ package graphql
 
 import (
 	"encoding/json"
+	"fmt"
 	"io"
 
 	"github.com/graphql-go/graphql"
@@ -43,6 +44,8 @@ func GraphQLQuery(body io.Reader) (*Query, error) {
 	var query Query
 
 	err = json.Unmarshal(data, &query)
+
+	fmt.Println(string(data), "\r\n", query)
 
 	if err != nil {
 		return nil, err
