@@ -1,18 +1,46 @@
 package news
 
 import (
-	"fmt"
-	"io"
+	"math/rand"
 	newsapi "server/app/services/news_api"
 
 	"github.com/graphql-go/graphql"
-	"github.com/lucas11776-golang/http"
 )
+
+type Rating struct {
+	Score int `json:"score"`
+	Votes int `json:"votes"`
+}
+
+// Define Rating type
+var ratingType = graphql.NewObject(graphql.ObjectConfig{
+	Name: "Rating",
+	Fields: graphql.Fields{
+		"score": &graphql.Field{
+			Type: graphql.Int,
+		},
+		"votes": &graphql.Field{
+			Type: graphql.Int,
+		},
+	},
+})
 
 var articleType = graphql.NewObject(
 	graphql.ObjectConfig{
 		Name: "Article",
 		Fields: graphql.Fields{
+			"rating": &graphql.Field{
+				Type: ratingType,
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					// Will call service
+					rating := Rating{
+						Score: rand.Intn(10) % 100,
+						Votes: rand.Intn(1000000),
+					}
+					return rating, nil
+				},
+			},
+
 			"publisher": &graphql.Field{
 				Type: graphql.String,
 			},
@@ -42,7 +70,6 @@ var queryType = graphql.NewObject(
 	graphql.ObjectConfig{
 		Name: "Query",
 		Fields: graphql.Fields{
-			/* http://{{ host }}/product?query={articles{publisher,published_at,image,title,description,content,url}} */
 			"articles": &graphql.Field{
 				Type:        graphql.NewList(articleType),
 				Description: "Get product list",
@@ -80,26 +107,13 @@ var queryType = graphql.NewObject(
 		},
 	})
 
-var schema, _ = graphql.NewSchema(
-	graphql.SchemaConfig{
-		Query: queryType,
-	},
-)
-
-func execute(query string, schema graphql.Schema) *graphql.Result {
-	result := graphql.Do(graphql.Params{
-		Schema:        schema,
-		RequestString: query,
-	})
-	if len(result.Errors) > 0 {
-		fmt.Printf("errors: %v", result.Errors)
-	}
-	return result
-}
-
 // Comment
-func Endpoint(req *http.Request, res *http.Response) *http.Response {
-	query, _ := io.ReadAll(req.Body)
+func Home() graphql.Schema {
+	schema, _ := graphql.NewSchema(
+		graphql.SchemaConfig{
+			Query: queryType,
+		},
+	)
 
-	return res.Json(execute(string(query), schema))
+	return schema
 }
