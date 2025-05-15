@@ -2,12 +2,12 @@ package graphql
 
 import (
 	"encoding/json"
-	"fmt"
 	"io"
 
 	"github.com/graphql-go/graphql"
 	"github.com/graphql-go/graphql/gqlerrors"
 	"github.com/lucas11776-golang/http"
+	"github.com/lucas11776-golang/http/types"
 )
 
 type Query struct {
@@ -28,7 +28,12 @@ func GraphQLRoute(schema graphql.Schema) http.WebCallback {
 		return res.Json(graphql.Do(graphql.Params{
 			Schema:        schema,
 			RequestString: query.Query,
-		}))
+		})).
+			SetHeaders(types.Headers{
+				"Access-Control-Request-Method": "GET,POST,DELETE,PUT",
+				"Access-Control-Allow-Headers":  "*",
+				"Access-Control-Allow-Origin":   "*",
+			})
 	}
 }
 
@@ -45,7 +50,7 @@ func GraphQLQuery(body io.Reader) (*Query, error) {
 
 	err = json.Unmarshal(data, &query)
 
-	fmt.Println(string(data), "\r\n", query)
+	// fmt.Println(string(data), "\r\n", query)
 
 	if err != nil {
 		return nil, err

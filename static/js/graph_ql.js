@@ -1,11 +1,39 @@
 
+class GraphQLQueryBuilder {
+    args = {};
+    scheme = {};
+
+    /**
+     * 
+     * @param {*} args 
+     * @param {*} scheme 
+     */
+    constructor(args, scheme) {
+        this.args = args;
+        this.scheme = scheme;
+    }
+
+    /**
+     * 
+     * @returns {string}
+     */
+    build() {
+        return "";
+    }
+
+
+    generate(index = 0) {
+
+    }
+}
+
 
 class GraphQL {
     name = "";
     url = "";
+    headers = {};
     args = {};
     structure = {};
-    headers = {};
 
     constructor(name) {
         this.name = name;
@@ -30,8 +58,6 @@ class GraphQL {
         this.structure = scheme;
         return this;
     }
-
-
 
     /**
      * 
@@ -62,22 +88,22 @@ class GraphQL {
         console.log(query)
 
 
-        const req = await fetch(url, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json',
-            },
-            body: query,
-        });
+        // const req = await fetch(url, {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //         'Accept': 'application/json',
+        //     },
+        //     body: query,
+        // });
 
 
 
 
-        // {"query":"{\n    articles {\n        title\n    }\n}","variables":{}}
+        // // {"query":"{\n    articles {\n        title\n    }\n}","variables":{}}
 
 
-        return await req.json();
+        // return await req.json();
     }
 }
 
@@ -93,8 +119,8 @@ class GraphQL {
 const Request = (name) => new GraphQL(name);
 
 
-//    const req = Request("articles")
-//             .arguments({category: "business"})
-//             .scheme(['publisher', 'published_at', 'image', 'title', 'description', 'content', 'url'])
-//             .fetch(`graph_ql/news`)
-//             .then()
+const req = Request("articles")
+        // .arguments({category: "business"})
+        .scheme(['title'])
+        .fetch(`http://127.0.0.1:8080/graph_ql/news`)
+        .then()
