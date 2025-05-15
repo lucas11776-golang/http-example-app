@@ -33,8 +33,8 @@ func configureRoutes(server *http.HTTP) {
 	server.Route().Group("/", routes.Web)         // Web
 	server.Route().Group("/", routes.Ws)          // Websocket
 	server.Route().Middleware(api.CorsMiddleware).Group("/", func(route *http.Router) {
-		server.Route().Group("api", routes.Api)          // API
-		server.Route().Group("graph_ql", routes.GraphQL) // GraphQL
+		route.Group("api", routes.Api)          // API
+		route.Group("graph_ql", routes.GraphQL) // GraphQL
 	})
 	server.Route().Fallback(controllers.NotFoundPage) // Page Not Found
 }

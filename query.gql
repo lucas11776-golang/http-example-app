@@ -1,0 +1,15 @@
+{
+  articles (category:"business") {
+    rating {
+      score,
+      votes
+    },
+    publisher,
+    published_at,
+    image,
+    title,
+    description,
+    content,
+    url  
+  }
+}

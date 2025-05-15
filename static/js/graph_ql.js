@@ -1,14 +1,19 @@
-
+/**
+ * 
+ */
 class GraphQLQueryBuilder {
+    name = "";
     args = {};
     scheme = {};
 
     /**
      * 
-     * @param {*} args 
-     * @param {*} scheme 
+     * @param {string} name 
+     * @param {{string:string|number}} args 
+     * @param {[]} scheme 
      */
-    constructor(args, scheme) {
+    constructor(name, args, scheme) {
+        this.name = name;
         this.args = args;
         this.scheme = scheme;
     }
@@ -18,16 +23,64 @@ class GraphQLQueryBuilder {
      * @returns {string}
      */
     build() {
-        return "";
+        let args = this.buildArgs();
+
+        args = `${this.name}${args ? ` ${args}` : ``}`;
+
+        let body = this.buildScheme(this.scheme, 2);
+
+        return `{\n${this.space()}"query": "{\\n${this.space()}${args} {\\n${body}${this.space()}\\n${this.space()}}\\n}"\n}`;
     }
 
-
-    generate(index = 0) {
-
+    /**
+     * 
+     * @returns {string}
+     */
+    buildArgs() {
+        let args = Object.keys(this.args).map(
+            k => typeof this.args[k] == "string" ? `${k}:\\"${this.args[k]}\\"` : `${k}:${this.args[k]}`
+        );
+        return args.length ? `(${args.join(",")})` : ``;
     }
+
+    /**
+     * 
+     * @param {[]} scheme 
+     * @param {number} index 
+     * @returns {string}
+     */
+    buildScheme(scheme, index = 0) {
+        return scheme.map(key => {
+            if (typeof key == "object") {
+                return Object.keys(key).map(
+                    k => `${this.space(index)}${k} {\\n${this.buildScheme(key[k], index+1)}\\n${this.space(index)}}`
+                ).join(",\\n")
+            }
+            return `${this.space(index)}${key}`;
+        }).join(",\\n");
+    }
+
+    /**
+     * 
+     * @param {number} dept 
+     * @returns {string}
+     */
+    space(dept = 1) {
+        let space = "  ";
+        let str = "";
+
+        for(let i =0; i < dept; i++) {
+            str += space;
+        }
+
+        return str;
+    }
+
 }
 
-
+/**
+ * 
+ */
 class GraphQL {
     name = "";
     url = "";
@@ -35,6 +88,10 @@ class GraphQL {
     args = {};
     structure = {};
 
+    /**
+     * 
+     * @param {string} name 
+     */
     constructor(name) {
         this.name = name;
     }
@@ -46,6 +103,7 @@ class GraphQL {
      */
     arguments(args) {
         this.args = args;
+
         return this;
     }
 
@@ -56,6 +114,7 @@ class GraphQL {
      */
     scheme(scheme) {
         this.structure = scheme;
+
         return this;
     }
 
@@ -65,45 +124,16 @@ class GraphQL {
      * @return {Promise}
      */
     async fetch(url) {
-        const filtersKeys = Object.keys(this.args);
-        const filtersString = filtersKeys.map(k => {
-            if (typeof this.args[k] == "string") {
-                return `${k}: \"${this.args[k]}\"`;
-            }
-            return `${k}:${this.args[k]}`;
+        const req = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+            },
+            body: new GraphQLQueryBuilder(this.name, this.args, this.structure).build(),
         });
 
-
-
-        let s = new String(
-            `{${this.name} ${filtersKeys.length ? `(${filtersString.join(",")})` : ``} {` +
-            `${this.structure.map(key => `    ${key}`).join(",")}` +
-            `}`
-        ).toString()
-
-
-
-        let query = `{\n  "query": "${s}  }"\n}`;
-
-        console.log(query)
-
-
-        // const req = await fetch(url, {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'application/json',
-        //         'Accept': 'application/json',
-        //     },
-        //     body: query,
-        // });
-
-
-
-
-        // // {"query":"{\n    articles {\n        title\n    }\n}","variables":{}}
-
-
-        // return await req.json();
+        return await req.json();
     }
 }
 
@@ -117,10 +147,3 @@ class GraphQL {
  * @returns {GraphQL}
  */
 const Request = (name) => new GraphQL(name);
-
-
-const req = Request("articles")
-        // .arguments({category: "business"})
-        .scheme(['title'])
-        .fetch(`http://127.0.0.1:8080/graph_ql/news`)
-        .then()
