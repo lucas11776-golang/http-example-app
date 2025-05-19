@@ -9,7 +9,7 @@ type NewsQuery struct {
 	Url        string    `json:"url" column:"url" type:"string"`
 }
 
-type NewsQueryArticles struct {
+type NewsQueryArticle struct {
 	Connection  string    `connection:"sqlite" table:"news_queries"`
 	ID          int64     `json:"id" column:"id" type:"primary_key"`
 	NewsQueryID int64     `column:"news_query_id" type:"INTEGER"`

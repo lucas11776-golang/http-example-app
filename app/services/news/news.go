@@ -3,6 +3,7 @@ package news
 import (
 	"server/models"
 	"server/utils/slices"
+	"time"
 
 	"github.com/lucas11776-golang/orm"
 )
@@ -11,7 +12,8 @@ import (
 func NewsExists(url string) bool {
 	count, err := orm.Model(models.NewsQuery{}).
 		Where("url", "=", url).
-		Count() // TODO: Added datetime to check if created at is less then 30 minutes.
+		AndWhere("created_at", "<", time.Now().Add(time.Minute*-30).Format(time.DateTime)).
+		Count()
 
 	if err != nil {
 		return false
@@ -21,8 +23,8 @@ func NewsExists(url string) bool {
 }
 
 // Comment
-func transformNewsQueryArticles(articles []*models.NewsQueryArticles) []models.Article {
-	return slices.Map(articles, func(article *models.NewsQueryArticles) models.Article {
+func transformNewsQueryArticles(articles []*models.NewsQueryArticle) []models.Article {
+	return slices.Map(articles, func(article *models.NewsQueryArticle) models.Article {
 		return models.Article{
 			ID:          article.ID,
 			Publisher:   article.Publisher,
@@ -38,10 +40,11 @@ func transformNewsQueryArticles(articles []*models.NewsQueryArticles) []models.A
 
 // Comment
 func NewsByUrl(url string) []models.Article {
-	articles, err := orm.Model(models.NewsQueryArticles{}).
+	articles, err := orm.Model(models.NewsQueryArticle{}).
 		Where("news_queries.url", "=", url).
+		AndWhere("news_queries.created_at", "<", time.Now().Add(time.Minute*-30).Format(time.DateTime)).
 		Join("articles", "news_queries.id", "=", "articles.news_query_id").
-		OrderBy("articles.id", orm.ASC).
+		OrderBy("articles.published_at", orm.DESC).
 		Get()
 
 	if err != nil {

@@ -87,7 +87,7 @@ var queryType = graphql.NewObject(
 				Resolve: func(params graphql.ResolveParams) (interface{}, error) {
 					q := ""
 					category := ""
-					limit := 50
+					limit := 100
 
 					if s, ok := params.Args["q"].(string); ok {
 						q = s

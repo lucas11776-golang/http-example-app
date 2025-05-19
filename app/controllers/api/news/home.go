@@ -8,10 +8,10 @@ import (
 
 // Comment
 func Home(req *http.Request, res *http.Response) *http.Response {
-	return res.Json(newsapi.FetchHeadlinesLatest(req.URL.Query().Get("q"), "", 50))
+	return res.Json(newsapi.FetchHeadlinesLatest(req.URL.Query().Get("q"), "", 100))
 }
 
 // Comment
 func Category(req *http.Request, res *http.Response) *http.Response {
-	return res.Json(newsapi.FetchHeadlinesLatest(req.URL.Query().Get("q"), req.Parameters.Get("category"), 50))
+	return res.Json(newsapi.FetchHeadlinesLatest(req.URL.Query().Get("q"), req.Parameters.Get("category"), 100))
 }
