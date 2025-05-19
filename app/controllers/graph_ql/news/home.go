@@ -101,7 +101,7 @@ var queryType = graphql.NewObject(
 						limit = l
 					}
 
-					return newsapi.Fetch(q, category, limit), nil
+					return newsapi.FetchHeadlinesLatest(q, category, limit), nil
 				},
 			},
 		},

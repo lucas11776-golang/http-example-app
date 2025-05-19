@@ -35,7 +35,7 @@
                 'content',
                 'url',
                 {"rating": ["score", "votes"]}])
-            .fetch(`http://127.0.0.1:8080/graph_ql/news`)
+            .fetch(`gql/news`)
             .then(data => new JsonEditor('#json-display', data))
             .catch(err => console.log("Response Error:", err))
     </script>

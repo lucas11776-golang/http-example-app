@@ -9,7 +9,7 @@ import (
 // Comment
 func Home(req *http.Request, res *http.Response) *http.Response {
 	return res.View("index", http.ViewData{
-		"articles": newsapi.Fetch(req.URL.Query().Get("q"), "", 50),
+		"articles": newsapi.FetchHeadlinesLatest(req.URL.Query().Get("q"), "", 50),
 		"q":        req.URL.Query().Get("q"),
 	})
 }
@@ -18,7 +18,7 @@ func Home(req *http.Request, res *http.Response) *http.Response {
 func Category(req *http.Request, res *http.Response) *http.Response {
 	return res.View("category", http.ViewData{
 		"category": req.Parameters.Get("category"),
-		"articles": newsapi.Fetch(req.URL.Query().Get("q"), req.Parameters.Get("category"), 50),
+		"articles": newsapi.FetchHeadlinesLatest(req.URL.Query().Get("q"), req.Parameters.Get("category"), 50),
 		"q":        req.URL.Query().Get("q"),
 	})
 }

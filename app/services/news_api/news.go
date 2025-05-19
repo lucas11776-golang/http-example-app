@@ -6,8 +6,10 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"server/app/services/news"
 	"server/env"
 	"server/models"
+	"server/utils/slices"
 	"strings"
 	"time"
 )
@@ -35,48 +37,51 @@ type News struct {
 }
 
 // Comment
-func Map(articles []Article, callback func(article Article) models.Article) []models.Article {
-	tranformed := []models.Article{}
-
-	for _, article := range articles {
-		tranformed = append(tranformed, callback(article))
-	}
-
-	return tranformed
+func transformArticles(articles []Article) []models.Article {
+	return slices.Map(articles, func(article Article) models.Article {
+		return transformArticle(article)
+	})
 }
 
 // Comment
-func Fetch(search string, category string, limit int) *[]models.Article {
+func transformArticle(article Article) models.Article {
+	return models.Article{
+		Publisher:   article.Source.Name,
+		PublishedAt: article.PublishedAt,
+		Image:       article.UrlToImage,
+		Title:       article.Title,
+		Description: article.Description,
+		Content:     article.Content,
+		Url:         article.Url,
+	}
+}
+
+// Comment
+func FetchHeadlinesLatest(search string, category string, limit int) *[]models.Article {
 	articles, err := TopHeadlines(search, category, limit, time.Now().Format("2006-01-02"))
 
 	if err != nil {
-		articles = make([]Article, 0)
+		articles = []models.Article{}
 	}
 
-	transformed := Map(articles, func(article Article) models.Article {
-		return models.Article{
-			Publisher:   article.Source.Name,
-			PublishedAt: article.PublishedAt,
-			Image:       article.UrlToImage,
-			Title:       article.Title,
-			Description: article.Description,
-			Content:     article.Content,
-			Url:         article.Url,
-		}
-	})
-
-	return &transformed
+	return &articles
 }
 
 // Comment
-func TopHeadlines(search string, category string, limit int, from string) ([]Article, error) {
-	news, err := Request(Url("top-headlines", search, category, limit, from))
+func TopHeadlines(search string, category string, limit int, from string) ([]models.Article, error) {
+	url := Url("top-headlines", search, category, limit, from)
 
-	if err != nil {
-		return make([]Article, 0), err
+	if news.NewsExists(url) {
+		return news.NewsByUrl(url), nil
 	}
 
-	return news.Articles, nil
+	news, err := Request(url)
+
+	if err != nil {
+		return []models.Article{}, err
+	}
+
+	return transformArticles(news.Articles), nil
 }
 
 // Comment

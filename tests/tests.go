@@ -26,7 +26,7 @@ func (ctx *Testing) Cleanup() {
 
 // TODO Looks like the structure meant work
 func TestCase(t *testing.T) *Testing {
-	testing := &Testing{HTTP: bootstrap.Boot()}
+	testing := &Testing{HTTP: bootstrap.Boot(".env")}
 
 	go testing.Run()
 
