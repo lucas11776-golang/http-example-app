@@ -75,13 +75,19 @@ func TopHeadlines(search string, category string, limit int, from string) ([]mod
 		return news.NewsByUrl(url), nil
 	}
 
-	news, err := Request(url)
+	response, err := Request(url)
 
 	if err != nil {
 		return []models.Article{}, err
 	}
 
-	return transformArticles(news.Articles), nil
+	articles := transformArticles(response.Articles)
+
+	if err := news.NewsSave(url, articles); err != nil {
+		fmt.Println(err) // logger here...
+	}
+
+	return articles, nil
 }
 
 // Comment

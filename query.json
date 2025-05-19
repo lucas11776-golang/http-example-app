@@ -1,1 +1,0 @@
-{"query":"{\n    articles {\n        title\n    }\n}","variables":{}}
