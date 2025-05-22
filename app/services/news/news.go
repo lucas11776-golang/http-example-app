@@ -42,7 +42,7 @@ func transformNewsQueryArticles(articles []*models.NewsQueryArticle) []models.Ar
 func NewsByUrl(url string) []models.Article {
 	articles, err := orm.Model(models.NewsQueryArticle{}).
 		Where("news_queries.url", "=", url).
-		AndWhere("news_queries.created_at", "<", time.Now().Add(time.Minute*-30).Format(time.DateTime)).
+		// AndWhere("news_queries.created_at", "<", time.Now().Add(time.Minute*-30).Format(time.DateTime)).
 		Join("articles", "news_queries.id", "=", "articles.news_query_id").
 		OrderBy("articles.published_at", orm.DESC).
 		Get()
