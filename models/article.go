@@ -15,3 +15,12 @@ type Article struct {
 	Content     string    `json:"content" column:"content" type:"text"`
 	Url         string    `json:"url" column:"url" type:"string"`
 }
+
+type ArticleResearchLink struct {
+	Connection string    `connection:"sqlite"`
+	ID         int64     `column:"id" type:"primary_key"`
+	CreatedAt  time.Time `column:"created_at" type:"datetime_current"`
+	Url        string    `json:"url" column:"url" type:"string"`
+	Title      string    `json:"title" column:"title" type:"string"`
+	Category   string    `json:"category" column:"category" type:"string"`
+}

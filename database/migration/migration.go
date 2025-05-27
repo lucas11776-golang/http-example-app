@@ -19,6 +19,7 @@ func main() {
 	err := sqlite.Migration().Migrate(orm.Models{
 		models.Article{},
 		models.NewsQuery{},
+		models.ArticleResearchLink{},
 	})
 
 	if err != nil {
