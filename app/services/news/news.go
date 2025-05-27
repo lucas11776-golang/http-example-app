@@ -8,6 +8,21 @@ import (
 	"github.com/lucas11776-golang/orm"
 )
 
+type Category string
+
+const (
+	General       Category = "General"
+	Business      Category = "Business"
+	Politics      Category = "Politics"
+	Science       Category = "Science"
+	Health        Category = "Health"
+	Entertainment Category = "Entertainment"
+	Sport         Category = "Sport"
+	Technology    Category = "Technology"
+	Finance       Category = "Finance"
+	War           Category = "War"
+)
+
 // Comment
 func NewsExists(url string) bool {
 	count, err := orm.Model(models.NewsQuery{}).
