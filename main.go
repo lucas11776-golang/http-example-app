@@ -5,34 +5,36 @@ import (
 	"fmt"
 	"server/bootstrap"
 	"server/env"
-	"server/workers/agents/scraper"
+	"server/workers/agents/analyst"
+	"server/workers/agents/capture"
 )
 
-func main() {
-	_ = bootstrap.Boot(".env")
+func juniorAnalyst() {
+	news := &capture.JuniorAnalyst{}
 
-	fmt.Printf("\r\nRunning Server %s:%d\r\n", env.Env("HOST"), env.EnvInt("PORT"))
-
-	// article, err := analyst.ResearchArticle(
-	// 	context.Background(),
-	// 	"https://www.news24.com/sport/soccer/psl/im-not-a-small-coach-nabi-defiant-in-his-process-as-chiefs-end-season-on-sombre-note-20250526-1042",
-	// )
-
-	// if err != nil {
-	// 	panic(err)
-	// }
-
-	// fmt.Println("ARTICLES -> ", article)
-
-	news := &scraper.WebSearch{}
-
-	links, err := news.All(context.Background())
+	links, err := news.ResearchArticle(context.Background(), []string{})
 
 	if err != nil {
 		panic(err)
 	}
 
 	fmt.Println(links)
+}
 
-	// server.Listen()
+func seniorAnalyst() {
+	news, err := analyst.ValidateArticle(context.Background(), nil)
+
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Println(news)
+}
+
+func main() {
+	_ = bootstrap.Boot(".env")
+
+	fmt.Printf("\r\nRunning Server %s:%d\r\n", env.Env("HOST"), env.EnvInt("PORT"))
+
+	seniorAnalyst()
 }

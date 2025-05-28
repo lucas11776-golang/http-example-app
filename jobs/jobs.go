@@ -1,5 +1,7 @@
 package jobs
 
-func Run() {
-
+type Jobs struct {
 }
+
+// Do something to start job...
+func (ctx *Jobs) MainForJobs() {}

@@ -12,19 +12,18 @@ import (
 func main() {
 	env.Load(".env")
 
-	// SQLite Connection
-	sqlite := sqlite.Connect(env.Env("DATABASE"))
-
-	// run migrations
-	err := sqlite.Migration().Migrate(orm.Models{
-		models.Article{},
-		models.NewsQuery{},
-		models.ArticleResearch{},
-	})
-
-	if err != nil {
+	if err := sqlite.Connect(env.Env("DATABASE")).Migration().Migrate(Models()); err != nil {
 		panic(err)
 	}
 
 	fmt.Println("Migration Successfully...")
+}
+
+// Comment
+func Models() orm.Models {
+	return orm.Models{
+		models.Article{},
+		models.NewsQuery{},
+		models.ArticleCaputure{},
+	}
 }

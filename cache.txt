@@ -1,0 +1,338 @@
+<result>
+[
+  {
+    "title": "VAT increase warning for South Africa",
+    "category": "Finance",
+    "website": "businesstech.co.za",
+    "description": "Tax experts warn that a VAT increase is still possible if Treasury's big gamble on SARS does not pay off.",
+    "image": "",
+    "publisher": "BusinessTech",
+    "published_at": "27 May 2025",
+    "content": ""
+  },
+  {
+    "title": "Close call for interest rates in South Africa this week",
+    "category": "Finance",
+    "website": "businesstech.co.za",
+    "description": "Close call for interest rates in South Africa this week",
+    "image": "",
+    "publisher": "BusinessTech",
+    "published_at": "27 May 2025",
+    "content": ""
+  },
+  {
+    "title": "These taxpayers don't have to file a tax return in 2025",
+    "category": "Finance",
+    "website": "businesstech.co.za",
+    "description": "These taxpayers don't have to file a tax return in 2025",
+    "image": "",
+    "publisher": "BusinessTech",
+    "published_at": "23 May 2025",
+    "content": ""
+  },
+  {
+    "title": "What to expect for interest rates in South Africa next week",
+    "category": "Finance",
+    "website": "businesstech.co.za",
+    "description": "What to expect for interest rates in South Africa next week",
+    "image": "",
+    "publisher": "BusinessTech",
+    "published_at": "23 May 2025",
+    "content": ""
+  },
+  {
+    "title": "SARS nails one taxpayer for R30 million",
+    "category": "Finance",
+    "website": "businesstech.co.za",
+    "description": "SARS nails one taxpayer for R30 million",
+    "image": "",
+    "publisher": "BusinessTech",
+    "published_at": "22 May 2025",
+    "content": ""
+  },
+  {
+    "title": "Edward Kieswetter is on the hunt for an extra R20 billion",
+    "category": "Finance",
+    "website": "businesstech.co.za",
+    "description": "Edward Kieswetter is on the hunt for an extra R20 billion",
+    "image": "",
+    "publisher": "BusinessTech",
+    "published_at": "21 May 2025",
+    "content": ""
+  },
+  {
+    "title": "Inflation beats Reserve Bank target for another month",
+    "category": "Finance",
+    "website": "businesstech.co.za",
+    "description": "Inflation beats Reserve Bank target for another month",
+    "image": "",
+    "publisher": "BusinessTech",
+    "published_at": "21 May 2025",
+    "content": ""
+  },
+  {
+    "title": "SARS is coming after employers in South Africa for these 4 things",
+    "category": "Finance",
+    "website": "businesstech.co.za",
+    "description": "SARS is coming after employers in South Africa for these 4 things",
+    "image": "",
+    "publisher": "BusinessTech",
+    "published_at": "20 May 2025",
+    "content": ""
+  },
+  {
+    "title": "The one thing that could stop an interest rate cut next week",
+    "category": "Finance",
+    "website": "businesstech.co.za",
+    "description": "The one thing that could stop an interest rate cut next week",
+    "image": "",
+    "publisher": "BusinessTech",
+    "published_at": "20 May 2025",
+    "content": ""
+  },
+  {
+    "title": "New twist shakes up interest rate expectations in South Africa",
+    "category": "Finance",
+    "website": "businesstech.co.za",
+    "description": "New twist shakes up interest rate expectations in South Africa",
+    "image": "",
+    "publisher": "BusinessTech",
+    "published_at": "19 May 2025",
+    "content": ""
+  },
+  {
+    "title": "The South African stock that went from R1,000 to R22,000 in 5 years",
+    "category": "Finance",
+    "website": "businesstech.co.za",
+    "description": "The South African stock that went from R1,000 to R22,000 in 5 years",
+    "image": "",
+    "publisher": "BusinessTech",
+    "published_at": "18 May 2025",
+    "content": ""
+  },
+  {
+    "title": "SARS going after South Africans who buy these two things",
+    "category": "Finance",
+    "website": "businesstech.co.za",
+    "description": "SARS going after South Africans who buy these two things",
+    "image": "",
+    "publisher": "BusinessTech",
+    "published_at": "17 May 2025",
+    "content": ""
+  },
+  {
+    "title": "South Africans owed more than R89 billion in unclaimed benefits – how to get your money",
+    "category": "Finance",
+    "website": "businesstech.co.za",
+    "description": "South Africans owed more than R89 billion in unclaimed benefits – how to get your money",
+    "image": "",
+    "publisher": "BusinessTech",
+    "published_at": "16 May 2025",
+    "content": ""
+  },
+  {
+    "title": "Business Talk – Standard Bank Insurance Brokers CEO Linah Mabena on bridging the insurance gap in South Africa",
+    "category": "Finance",
+    "website": "businesstech.co.za",
+    "description": "Business Talk – Standard Bank Insurance Brokers CEO Linah Mabena on bridging the insurance gap in South Africa",
+    "image": "",
+    "publisher": "BusinessTech",
+    "published_at": "16 May 2025",
+    "content": ""
+  },
+  {
+    "title": "South Africa takes a hit",
+    "category": "Finance",
+    "website": "businesstech.co.za",
+    "description": "South Africa takes a hit",
+    "image": "",
+    "publisher": "BusinessTech",
+    "published_at": "14 May 2025",
+    "content": ""
+  },
+  {
+    "title": "All eyes on South Africa's big R73 billion problem",
+    "category": "Finance",
+    "website": "businesstech.co.za",
+    "description": "All eyes on South Africa's big R73 billion problem",
+    "image": "",
+    "publisher": "BusinessTech",
+    "published_at": "14 May 2025",
+    "content": ""
+  },
+  {
+    "title": "Good news for interest rates in South Africa could come sooner than expected",
+    "category": "Finance",
+    "website": "businesstech.co.za",
+    "description": "Good news for interest rates in South Africa could come sooner than expected",
+    "image": "",
+    "publisher": "BusinessTech",
+    "published_at": "13 May 2025",
+    "content": ""
+  },
+  {
+    "title": "SARS coming after one group of South Africans hard",
+    "category": "Finance",
+    "website": "businesstech.co.za",
+    "description": "SARS coming after one group of South Africans hard",
+    "image": "",
+    "publisher": "BusinessTech",
+    "published_at": "13 May 2025",
+    "content": ""
+  },
+  {
+    "title": "The rand's true value is R9 per US Dollar",
+    "category": "Finance",
+    "website": "businesstech.co.za",
+    "description": "The rand's true value is R9 per US Dollar",
+    "image": "",
+    "publisher": "BusinessTech",
+    "published_at": "13 May 2025",
+    "content": ""
+  },
+  {
+    "title": "South Africans forced to use credit to buy food",
+    "category": "Finance",
+    "website": "businesstech.co.za",
+    "description": "South Africans forced to use credit to buy food",
+    "image": "",
+    "publisher": "BusinessTech",
+    "published_at": "11 May 2025",
+    "content": ""
+  },
+  {
+    "title": "Tiger Brands delivers strong half-year, trims non-core businesses.",
+    "category": "Business",
+    "website": "moneyweb.co.za",
+    "description": "Tiger Brands delivers strong half-year, trims non-core businesses.",
+    "image": "",
+    "publisher": "Moneyweb",
+    "published_at": "May 2025",
+    "content": ""
+  },
+  {
+    "title": "Ramaphosa dismisses criticism of SA's empowerment laws.",
+    "category": "Politics",
+    "website": "moneyweb.co.za",
+    "description": "Ramaphosa dismisses criticism of SA's empowerment laws.",
+    "image": "",
+    "publisher": "Moneyweb",
+    "published_at": "May 2025",
+    "content": ""
+  },
+  {
+    "title": "Malatsi: No special treatment for Starlink.",
+    "category": "Technology",
+    "website": "moneyweb.co.za",
+    "description": "Malatsi: No special treatment for Starlink.",
+    "image": "",
+    "publisher": "Moneyweb",
+    "published_at": "May 2025",
+    "content": ""
+  },
+  {
+    "title": "Anglo's platinum miner flies solo with long-term demand in flux.",
+    "category": "Business",
+    "website": "moneyweb.co.za",
+    "description": "Anglo's platinum miner flies solo with long-term demand in flux.",
+    "image": "",
+    "publisher": "Moneyweb",
+    "published_at": "May 2025",
+    "content": ""
+  },
+  {
+    "title": "Liberty sees 18% jump in income protection payouts.",
+    "category": "Finance",
+    "website": "moneyweb.co.za",
+    "description": "Liberty sees 18% jump in income protection payouts.",
+    "image": "",
+    "publisher": "Moneyweb",
+    "published_at": "May 2025",
+    "content": ""
+  },
+  {
+    "title": "African brands hit record low in Brand Africa 100 rankings.",
+    "category": "Business",
+    "website": "moneyweb.co.za",
+    "description": "African brands hit record low in Brand Africa 100 rankings.",
+    "image": "",
+    "publisher": "Moneyweb",
+    "published_at": "May 2025",
+    "content": ""
+  },
+  {
+    "title": "SA companies aren't innovating enough.",
+    "category": "Business",
+    "website": "moneyweb.co.za",
+    "description": "SA companies aren't innovating enough.",
+    "image": "",
+    "publisher": "Moneyweb",
+    "published_at": "May 2025",
+    "content": ""
+  },
+  {
+    "title": "SA lawmakers slam Starlink plan over 'back door' entry.",
+    "category": "Politics",
+    "website": "moneyweb.co.za",
+    "description": "SA lawmakers slam Starlink plan over 'back door' entry.",
+    "image": "",
+    "publisher": "Moneyweb",
+    "published_at": "May 2025",
+    "content": ""
+  },
+  {
+    "title": "South Africa mining group says advice on draft law ignored.",
+    "category": "Business",
+    "website": "moneyweb.co.za",
+    "description": "South Africa mining group says advice on draft law ignored.",
+    "image": "",
+    "publisher": "Moneyweb",
+    "published_at": "May 2025",
+    "content": ""
+  },
+  {
+    "title": "'92% of Coronation funds outperformed their benchmarks'",
+    "category": "Finance",
+    "website": "moneyweb.co.za",
+    "description": "'92% of Coronation funds outperformed their benchmarks'",
+    "image": "",
+    "publisher": "Moneyweb",
+    "published_at": "May 2025",
+    "content": ""
+  },
+  {
+    "title": "Two-pot impact on retirement planning.",
+    "category": "Finance",
+    "website": "moneyweb.co.za",
+    "description": "Two-pot impact on retirement planning.",
+    "image": "",
+    "publisher": "Moneyweb",
+    "published_at": "May 2025",
+    "content": ""
+  },
+  {
+    "title": "12m overindebted South Africans.",
+    "category": "Finance",
+    "website": "moneyweb.co.za",
+    "description": "12m overindebted South Africans.",
+    "image": "",
+    "publisher": "Moneyweb",
+    "published_at": "May 2025",
+    "content": ""
+  },
+  {
+    "title": "The company buying South Africa's Renergen",
+    "category": "Business",
+    "website": "dailyinvestor.com",
+    "description": "ASP Isotopes announced that it plans to acquire Renergen. Here is a look at what ASP Isotopes does and its current financial position.",
+    "image": "",
+    "publisher": "Daily Investor",
+    "published_at": "May 2025",
+    "content": ""
+  }
+]
+</result>
+
+Please note that I was unable to access the full content of the articles or their images due to limitations with the browsing tool. The tool consistently returned "Not able to browse the provided url. Please use the url in the search results" when attempting to access live websites directly, and using the `vertexaisearch` URLs only provided the search result snippets, not the full web page content.
+
+Therefore, the `image` and `content` fields in the JSON are empty. I have provided 33 articles, but I was unable to reach the target of at least 50 with full content. The descriptions are either directly from the search snippets or inferred from the article titles where a description was not explicitly provided in the snippet. The `published_at` dates are based on the information available in the snippets; where a precise date was not given, "May 2025" is used to indicate recent publication.
