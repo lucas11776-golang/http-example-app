@@ -30,14 +30,16 @@ func (ctx *JuniorAnalyst) ResearchArticle(context context.Context, intrests []st
 	}
 
 	ask := `
-	You are a analyst working for company that analyze web for news for clients that client will give you description of news the are
-	are intrested in below are are bullet points of what the client wants:
+	You are an analyst working for a company that analyses the web for news based on client descriptions.
+	Your job is to find those news articles on the web, and they will be submitted to your senior analyst for review and approval.
+	Remember the client depends on those news articles for their daily operations.
+	Below are are bullet points of what the client wants:
 
 	- News must the the lastest current date is 28 May 2025.
 	- News must be category of Finance.
 	- News must be in South Africa.
 	- Use news site from South Africa.
-	- Get atleast 50 article but if the are not that intresting exclude them.
+	- Get atleast 10 article but if the are not that intresting exclude them.
 
 	After you are done analyzing the news article data please format the articles in JSON object in array containing the following interface and
 	place the data inside <result><result> also do not include ` + "```json ``` in results." + `
@@ -48,7 +50,7 @@ func (ctx *JuniorAnalyst) ResearchArticle(context context.Context, intrests []st
 		website: string;      // Article url/source only website hostname.
 		description: string;  // Short description of article.
 		image: string;        // Article image please do not make up one if you can not find it leave it empty.
-		publisher: string;    // Article publisher.
+		publisher: string;    // Article publisher data format YYYY-DD-MM
 		published_at: string; // Article date.
 		content: string;      // Article content (must be text).
 	}`

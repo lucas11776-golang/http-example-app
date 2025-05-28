@@ -1,18 +1,13 @@
 <result>
 [
-  {
-    "rating": 9,
-    "trusted": [
-      "News24",
-      "BusinessTech",
-      "IOL (Independent Online)",
-      "Moneyweb",
-      "Financial Sector Conduct Authority (FSCA)"
-    ],
-    "untrusted": [],
-    "content": "South Africans are currently owed a staggering sum of over R90 billion in unclaimed pension and provident fund benefits. This substantial amount represents funds that were never claimed by beneficiaries or former members of retirement funds, often due to changes in employment, emigration, or simply a lack of awareness. The Financial Sector Conduct Authority (FSCA) oversees these funds and urges individuals to check if they are owed money. To claim these benefits, individuals can typically start by contacting the FSCA directly or using their online unclaimed benefit search tool. It is crucial to have personal identification details and any relevant fund information available. Many retirement funds also have their own databases. Beware of fraudulent schemes promising to help claim funds for a fee; legitimate claims processes do not require upfront payments. This money can significantly impact individuals' financial well-being, making it vital to follow official channels and ensure all legitimate claims are processed.",
-    "html": "<p>South Africans are currently owed a staggering sum of over <b>R90 billion</b> in unclaimed pension and provident fund benefits. This substantial amount represents funds that were never claimed by beneficiaries or former members of retirement funds, often due to changes in employment, emigration, or simply a lack of awareness.</p><p>The <b>Financial Sector Conduct Authority (FSCA)</b> oversees these funds and urges individuals to check if they are owed money.</p><p>To claim these benefits, individuals can typically start by contacting the <b>FSCA directly</b> or using their online unclaimed benefit search tool. It is crucial to have personal identification details and any relevant fund information available. Many retirement funds also have their own databases.</p><p><b>Beware of fraudulent schemes</b> promising to help claim funds for a fee; legitimate claims processes do not require upfront payments. This money can significantly impact individuals' financial well-being, making it vital to follow official channels and ensure all legitimate claims are processed.</p>",
-    "description": "Over R90 billion in unclaimed pension and provident fund benefits are owed to South Africans. The FSCA encourages individuals to use official channels, like their online search tool, to check and claim these funds. Be cautious of scams; legitimate processes don't require upfront fees."
-  }
+	{
+		"rating": 9,
+		"trusted": ["News24", "Eyewitness News (EWN)", "GroundUp", "Moneyweb"],
+		"untrusted": ["Unknown/Provided Placeholder (Original Input)"],
+		"title": "Standard Bank Faces Renewed Scrutiny Over Controversial R100 Soweto Home Auction in Decades-Long Legal Battle",
+		"content": "The long-running legal saga between Soweto homeowner Mr. Themba Nkau and Standard Bank has once again drawn sharp criticism towards the financial institution after his family home was controversially repossessed and sold at auction for a mere R100 in 2011. The deeply contentious sale stemmed from a property loan initiated in 1992, igniting a three-decade battle for justice.\n\nInitially, Mr. Nkau took out a R45,000 loan from Standard Bank in 1992. Despite arguments that he had settled the debt, his home was auctioned off for a fraction of its value. This shocking development has been a focal point of public outrage and legal scrutiny, with the Supreme Court of Appeal previously referring the matter back to the High Court for further consideration. Critics argue the case highlights systemic issues within the banking sector regarding repossessions and the protection of vulnerable homeowners. Standard Bank has consistently maintained its actions were lawful, but the ongoing litigation underscores the severe impact on families caught in such protracted disputes.",
+		"html": "<p>The long-running legal saga between Soweto homeowner <b>Mr. Themba Nkau</b> and <b>Standard Bank</b> has once again drawn sharp criticism towards the financial institution after his family home was controversially repossessed and sold at auction for a mere <b>R100 in 2011</b>. The deeply contentious sale stemmed from a property loan initiated in 1992, igniting a three-decade battle for justice.</p><br><p>Initially, Mr. Nkau took out a R45,000 loan from Standard Bank in 1992. Despite arguments that he had settled the debt, his home was auctioned off for a fraction of its value. This shocking development has been a focal point of public outrage and legal scrutiny, with the <i>Supreme Court of Appeal</i> previously referring the matter back to the High Court for further consideration. Critics argue the case highlights systemic issues within the banking sector regarding repossessions and the protection of vulnerable homeowners. Standard Bank has consistently maintained its actions were lawful, but the ongoing litigation underscores the severe impact on families caught in such protracted disputes.</p>",
+		"description": "Standard Bank faces renewed criticism over the controversial R100 auction of a Soweto home in 2011. Stemming from a 1992 loan, the case has escalated into a three-decade legal battle for justice, highlighting systemic issues in repossessions."
+	}
 ]
 </result>

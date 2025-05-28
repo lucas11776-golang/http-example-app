@@ -72,5 +72,5 @@ interface Article {
     untrusted: []string;    // Untrusted source reported on article.
     content: string;        // Update article base on all trusted source.
     html: string;        	// Update article base on all trusted source - in html please make the content easy readable here by apply br,b etc.
-    description: string;    // Short summary of article within 30-60 words.
+    description: string;    // Short summary of article within 20-50 words.
 }

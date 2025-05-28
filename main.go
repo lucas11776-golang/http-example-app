@@ -36,5 +36,6 @@ func main() {
 
 	fmt.Printf("\r\nRunning Server %s:%d\r\n", env.Env("HOST"), env.EnvInt("PORT"))
 
-	seniorAnalyst()
+	juniorAnalyst()
+	// seniorAnalyst()
 }

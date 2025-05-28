@@ -82,7 +82,7 @@ func ValidateArticle(context context.Context, article *models.ArticleCaputure) (
 	get content from trust source and build the article content please the content must atleast be 120 words:
 
 	Title:
-	South Africans owed more than R89 billion in unclaimed benefits - how to get your money
+	Standard Bank slammed in court after repossessing and auctioning Soweto home for R200
 
 	Published At:
 	16 May 2025
@@ -91,9 +91,10 @@ func ValidateArticle(context context.Context, article *models.ArticleCaputure) (
 	Finance
 
 	Description:
-	South Africans owed more than R89 billion in unclaimed benefits - how to get your money
+	1992 property loan sparks 30-year fight.
 
 	Article Content:
+	Standard Bank faced legal action after controversially repossessing and auctioning a Soweto home for a mere R200, a move stemming from a property loan dispute initiated in 1992 that has now escalated into a three-decade legal battle.
 
 
 	Our system whats the result in JSON object in array containing the following interface and
@@ -103,9 +104,10 @@ func ValidateArticle(context context.Context, article *models.ArticleCaputure) (
 		rating: number;         // Article rating out of 10 not float only decimals.
 		trusted: []string;      // Trusted source reported on article only the name.
 		untrusted: []string;    // Untrusted source reported on article.
-		content: string;        // Update article base on all trusted source.
+		title: string;          // Get the article a attractive title that will want the use to read it.
+		content: string;        // Update article content base on all trusted source.
 		html: string;        	// Update article base on all trusted source - in html please make the content easy readable here by apply br,b etc.
-		description: string;    // Short summary of article within 30-60 words.
+		description: string;    // Short summary of article within 20-50 words.
 	}`
 
 	content := []*genai.Content{

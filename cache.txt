@@ -1,338 +1,104 @@
 <result>
 [
   {
-    "title": "VAT increase warning for South Africa",
+    "title": "South African finance minister re-tables 2025 budget with no VAT hike",
     "category": "Finance",
-    "website": "businesstech.co.za",
-    "description": "Tax experts warn that a VAT increase is still possible if Treasury's big gamble on SARS does not pay off.",
+    "website": "xinhua.net",
+    "description": "South African Finance Minister Enoch Godongwana re-tabled the 2025 Budget before the parliament on Wednesday, excluding the contentious value-added tax (VAT) increase and prioritizing social spending and economic growth while aiming to rein in public debt.",
     "image": "",
-    "publisher": "BusinessTech",
-    "published_at": "27 May 2025",
-    "content": ""
+    "publisher": "Xinhua",
+    "published_at": "2025-05-22",
+    "content": "CAPE TOWN, May 21 (Xinhua) -- South African Finance Minister Enoch Godongwana re-tabled the 2025 Budget before the parliament on Wednesday, excluding the contentious value-added tax (VAT) increase and prioritizing social spending and economic growth while aiming to rein in public debt. This came after the budget was delayed from its original February date due to internal disputes over the proposed VAT hike. On March 12, Godongwana presented a budget review proposing a phased increase of 0.5 percentage points in 2025/26 and another 0.5 in 2026/27, raising the VAT rate to 16 percent by the 2026/27 financial year. Delivering his third version of the 2025 budget speech during the National Assembly plenary on Wednesday afternoon, the finance minister outlined several key points revised in the budget, including the country's economic status, growth projections, substantial debt servicing costs, the withdrawal of the contentious VAT increases, and the continuation of the social relief grant. 'We now have clarity: VAT will remain at 15 percent. This decision demonstrates our commitment to listening to South Africans and all the political parties represented in this House,' he said. However, to balance the withdrawal of the VAT hike, Godongwana said fuel taxes would be adjusted for inflation. He noted that South Africa's economy will likely expand by 1.4 percent this year, lower than the 1.9 percent projected in March, and then rise moderately to 1.6 percent in 2026 and 1.8 percent in 2027. In his speech, Godongwana said the budget still aims to grow the country's income faster than its spending, with government debt projected to stabilize at 77.4 percent of the gross domestic product, up from the 76.2 percent projected in March. According to him, key spending measures that will be implemented going forward are diverse and take into account changes in the global economy. Infrastructure investment remains a key component in driving economic growth, and the government has maintained its 1 trillion rand (about 55.8 billion U.S. dollars) allocation for infrastructure spending over three years to support this growth, he noted. Meanwhile, increases to all social grants will not be affected by the re-tabled budget. 'This budget supports economic activity while raising future economic prospects, directs spending toward the social wage, and invests in state capability and critical infrastructure, all the while promoting fiscal sustainability,' Godongwana said. ■"
   },
   {
-    "title": "Close call for interest rates in South Africa this week",
+    "title": "Government plans to use pension fund money for South African industrial policy projects",
     "category": "Finance",
     "website": "businesstech.co.za",
-    "description": "Close call for interest rates in South Africa this week",
+    "description": "Finance Minister Enoch Godongwana reaffirmed the government's plan to fund industrial policy projects using long-term domestic savings, such as pension funds. Work is underway to issue the first infrastructure bond by 2026.",
     "image": "",
     "publisher": "BusinessTech",
-    "published_at": "27 May 2025",
-    "content": ""
+    "published_at": "2025-05-28",
+    "content": "Finance Minister Enoch Godongwana reaffirmed the government's plan to fund industrial policy projects using long-term domestic savings, such as pension funds. Work is underway to issue the first infrastructure bond by 2026. This was revealed during the Finance Minister's third and final presentation of the National Budget on 21 May 2025. During his address, Godongwana underscored infrastructure as a critical pillar of South Africa's growth strategy. “Quality infrastructure investment expands the productive capacity of the economy and responds to the diverse needs of the citizens,” he said. “Infrastructure is also a rich source of jobs, in construction, engineering, and related industries across a range of skill levels.” Godongwana emphasised that the government is committed to shifting spending from consumption to investment, with capital payments being the fastest-growing category of expenditure. “Public infrastructure spending will exceed R1 trillion over the next three years, with key allocations directed toward transport and logistics, energy, and water and sanitation,” he said. Of the R402 billion budgeted for transport and logistics, R93.1 billion is earmarked for the South African National Roads Agency (SANRAL). This will maintain the country's 24,000-kilometre road network, while R53.1 billion will go towards refurbishing provincial roads. A further R66.3 billion is allocated to PRASA, with R18.2 billion for the renewal of its rolling stock fleet and R12.3 billion for the signalling system. These efforts aim to expand affordable commuter rail services, particularly for low-income earners who spend over half their income on transport. In the energy sector, R219.2 billion will be invested in strengthening the electricity network across generation, transmission, and distribution. “Investments in renewable energy projects continue to contribute to stabilising the power supply,” said Godongwana, highlighting the progress in reducing load shedding and connecting renewables to the grid. R156.3 billion will be spent on water and sanitation, expanding dams and bulk infrastructure supporting farms, factories, and mines. Considering these plans, the finance minister confirmed that the country remains on track to issue its first infrastructure bond in 2025 or 2026. “We are also exploring alternative financing instruments to allow pension funds, commercial banks, development banks and international financial institutions to participate in financing our infrastructure plans,” he said. He added that reforms such as reconfiguring the Budget Facility for Infrastructure (BFI), which reviews proposals quarterly instead of annually, will further unlock investment. “These reforms are how we plan to leverage infrastructure investment to ease supply-side constraints and improve access to social services,” Godongwana said. The plan has been in the pipeline for years Over the years, the ANC government has adopted and subsequently retracted various policies related to pension funds, with the most notable being its initial desire to adopt prescribed assets to fund government infrastructure projects. Prescribed assets force retirement funds to allocate a percentage of their holdings to specific government-approved instruments. The party adopted the policy in its 2017 elective conference and then made it a key policy in its election manifesto for the 2019 elections. In 2022, Godongwana stated that there are other opportunities for pension funds to co-invest with the government, particularly in delivering infrastructure throughout the country. He said that prescribed assets were something 'to be investigated' but could not be instated without substantial consultation and a robust review process by the government. Talk of prescribed assets has since disappeared from the pension fund discourse. However, it resurfaced when it was included in the ANC's 2024 election manifesto. It stated the party would “engage and direct financial institutions to invest a portion of their funds in industrialisation, infrastructure development and the economy through prescribed assets”. The practice of prescribed assets has a history in South Africa. It was first created in 1956 to force retirement funds to invest around half of their assets in South African government and parastatal bonds. The level of prescriptions rose for two decades and peaked in 1977. After that, it tapered off before being scrapped in 1989. Some in the pension industry have expressed strong concerns over the reintroduction of prescribed assets, fearing that the funds may be threatened. Key figures, such as Dawie de Villiers, CEO of Alexander Forbes, and Dawie Roodt, chief economist at Efficient Group, have argued against this move. They argued that it removes autonomy from pension fund trustees and contributes to the generally poor performance of these enterprises. No need to panic Managing director of Netto Invest Cameron McCallum However, other experts have called for calm, noting that the industry is highly regulated and that the government is far from enforcing such regulations. Considering South Africa's fiscal challenges, including tax shortfalls, high unemployment, and the poor state of many state-owned enterprises, it's easy to assume this spells bad news for investors. Cameron McCallum, Managing Director of Netto Invest, said there are certainly concerns, but things may not be as bad as we believe. Godongwana, the head of economic transformation for the ANC, has stated that the party is focusing on Regulation 28 of the Pension Funds Act. This regulation is designed to protect investors and ensure portfolio diversification while limiting the amount of pension funds that can invest in certain assets. “He noted that the party is shifting away from enforced prescriptions regarding these investments,” said McCallum. “The idea currently tabled is to broaden the investable options to enable higher levels of investment in unlisted asset classes such as infrastructure or 'green' projects.” “So, the keyword for us is 'enable', not 'enforce'.” McCallum admitted that he can't predict how the legislation will unfold in the future, but he mentioned a couple of considerations that remain relevant. He noted that the process is still in its early stages, and no changes have been announced yet. He added that pension fund assets in South Africa are well-regulated and protected. McCallum explained that many stakeholders in the financial services industry would contest any restrictions that could harm investors in court. “Policymakers also recognise that imposing significant restrictions on investments could lead to a shrinking pension fund industry,” he said. “This decline would ultimately reduce the availability of capital, as members might either contribute less to their pension funds or withdraw their savings.”"
   },
   {
-    "title": "These taxpayers don't have to file a tax return in 2025",
+    "title": "Afreximbank wins mandate as sole financial advisor for South Africa's $1.7-billion Suiso Project",
     "category": "Finance",
-    "website": "businesstech.co.za",
-    "description": "These taxpayers don't have to file a tax return in 2025",
+    "website": "afreximbank.com",
+    "description": "African Export-Import Bank's (Afreximbank) Advisory and Capital Markets (ACMA) department has been appointed as the exclusive financial advisor to raise capital for the US$1.7-billion Suiso Project, a transformative coal-to-fertiliser facility to be developed in Kriel, Mpumalanga Province, in South Africa.",
     "image": "",
-    "publisher": "BusinessTech",
-    "published_at": "23 May 2025",
-    "content": ""
+    "publisher": "African Export-Import Bank",
+    "published_at": "2025-05-27",
+    "content": "Cairo, Egypt, 27 May 2025: –African Export-Import Bank's (Afreximbank) Advisory and Capital Markets (ACMA) department has been appointed and mandated as the exclusive financial advisor to raise capital for the US$1.7-billion Suiso Project, a transformative coal-to-fertiliser facility to be developed in Kriel, Mpumalanga Province, in South Africa. As financial advisor, ACMA's role will involve leveraging its network and expertise to structure and mobilise the capital required for the project's execution. The Suiso Project, which aims to promote sustainable agriculture, will use cutting-edge fertiliser technology, such as air products gasification, and is expected to enhance the food security situation in the region. Sponsored by a consortium of leading energy and industrial companies committed to sustainable development and economic growth in the region, the project represents a significant investment in South Africa's industrial agriculture sector aimed at reducing dependency on imported fertilisers. This appointment is a reflection of the increasing recognition of Afreximbank's capacity and commitment to supporting large-scale projects with the potential to drive industrialisation and economic development across Africa. Suiso was formed recently to focus on the manufacture of ammonia and fertiliser, using a fossil-fuel gasification process. It intends to build a more resilient and sustainable fertiliser and agricultural market across Sub-Saharan Africa with more efficient fertiliser application rates and a reduction in greenhouse gas emissions. Suiso plans to establish a blue ammonia production facility with a capacity of 2,200 tonnes per day (TPD). This facility will produce approximately 2,600 TPD of Urea, 1,600 TPD of Ammonium Nitrate (TAN), and a low-density Ammonium Nitrate using prilling technology, with any excess ammonia being sold in bulk. ENDS About Afreximbank African Export-Import Bank (Afreximbank) is a Pan-African multilateral financial institution mandated to finance and promote intra- and extra-African trade. For over 30 years, the Bank has been deploying innovative structures to deliver financing solutions that support the transformation of the structure of Africa's trade, accelerating industrialisation and intra-regional trade, thereby boosting economic expansion in Africa. A stalwart supporter of the African Continental Free Trade Agreement (AfCFTA), Afreximbank has launched a Pan-African Payment and Settlement System (PAPSS) that was adopted by the African Union (AU) as the payment and settlement platform to underpin the implementation of the AfCFTA. Working with the AfCFTA Secretariat and the AU, the Bank has set up a US$10 billion Adjustment Fund to support countries effectively participating in the AfCFTA. At the end of December 2024, Afreximbank's total assets and contingencies stood at over US$40.1 billion, and its shareholder funds amounted to US$7.2 billion. Afreximbank has investment grade ratings assigned by GCR (international scale) (A), Moody's (Baa1), China Chengxin International Credit Rating Co., Ltd (CCXI) (AAA), Japan Credit Rating Agency (JCR) (A-) and Fitch (BBB). Afreximbank has evolved into a group entity comprising the Bank, its equity impact fund subsidiary called the Fund for Export Development Africa (FEDA), and its insurance management subsidiary, AfrexInsure (together, “the Group”). The Bank is headquartered in Cairo, Egypt. For more information, visit: www.afreximbank.com Follow us on X |Facebook | LinkedIn | Instagram Media Contact: Vincent Musumba Communications and Events Manager (Media Relations) Email: press@afreximbank.com Share: Want to know more about us? If you need help on choosing the right solution or have any other questions - we are here to help! Just click the button. Get in touch with us Now! Our Bank About Us Careers Contact Us Products & Services Who We Serve Our Key Services Media News Events Press Releases Insights Knowledge & Research About us Publications Data Library & Knowledge Centre Investors Financial Information Credit Ratings Reports IPO FAQs Apply for facility Français (French) English Terms of Use Privacy Notice Connect with Us Facebook Twitter Youtube Instagram LinkedIn Attention! Your browser isn't compatible with the requirements to browse this website. Please switch the browser or device you are using"
   },
   {
-    "title": "What to expect for interest rates in South Africa next week",
+    "title": "South Africa: Coin vs. Capital – Cryptocurrency is not subject to exchange control",
     "category": "Finance",
-    "website": "businesstech.co.za",
-    "description": "What to expect for interest rates in South Africa next week",
+    "website": "Unknown",
+    "description": "In a landmark ruling, the Pretoria High Court in Standard Bank v South African Reserve Bank ruled that cryptocurrencies do not constitute “capital” under South Africa's Exchange Control Regulations. This means crypto assets are not subject to the country's strict exchange control regime, offering long-awaited clarity for the crypto industry.",
     "image": "",
-    "publisher": "BusinessTech",
-    "published_at": "23 May 2025",
-    "content": ""
+    "publisher": "Unknown",
+    "published_at": "2025-05-28",
+    "content": "In a landmark ruling, the Pretoria High Court in Standard Bank v South African Reserve Bank ruled that cryptocurrencies do not constitute “capital” under South Africa's Exchange Control Regulations. This means crypto assets are not subject to the country's strict exchange control regime, offering long-awaited clarity for the crypto industry. While this judgment removes the need for SARB approval to export crypto, the relief may be temporary, as future legislative amendments could reassert regulatory oversight. For now, the decision marks a significant shift in how digital assets are treated under South African financial law. In depth. The question of whether cryptocurrencies fall into the scope of South Africa's currency and exchange control regime has finally been answered. On 15 May 2025, the Pretoria High Court handed down judgment in Standard Bank of South Africa v South African Reserve Bank and Others (047643/2023) ZAGPPHC 481 (“Standard Bank v SARB“), ruling that cryptocurrencies do not constitute capital in terms of the Exchange Control Regulations, 1961, and are consequently not subject to South Africa's rigid exchange control framework. This brings an end to a debate in the South African crypto asset industry as to whether cryptocurrencies require exchange control approval for their export out of South Africa. However, from experience on similar prior judgments on the Exchange Control Regulations, this reprieve may be short lived. The Exchange Control Regulations. Regulation 10(1)(c) of the Exchange Control Regulations forms the bedrock of South Africa's exchange control framework and provides that no person may enter into a transaction over a certain value where “capital” is directly or indirectly exported from the Republic without the approval of the South African Reserve Bank (SARB). This framework was created in an era dominated by corporeal wealth and traditional currency, and has long been argued to be ill-suited to deal"
   },
   {
-    "title": "SARS nails one taxpayer for R30 million",
-    "category": "Finance",
-    "website": "businesstech.co.za",
-    "description": "SARS nails one taxpayer for R30 million",
+    "title": "South Africa Proposes Buying U.S. LNG as It Seeks a Comprehensive Trade Deal",
+    "category": "Business",
+    "website": "Unknown",
+    "description": "During President Cyril Ramaphosa's visit to the White House on 21 May 2025, South Africa tabled an ambitious trade package aimed at resetting bilateral ties, including an offer to import U.S. liquefied natural gas (LNG) annually.",
     "image": "",
-    "publisher": "BusinessTech",
-    "published_at": "22 May 2025",
-    "content": ""
+    "publisher": "Reuters",
+    "published_at": "2025-05-28",
+    "content": "During President Cyril Ramaphosa's visit to the White House on 21 May 2025, South Africa tabled an ambitious trade package aimed at resetting bilateral ties strained under the Trump administration. At its core was an offer to import 75–100 petajoules (approximately 75–100 million m³) of U.S. liquefied natural gas (LNG) annually over the next decade, potentially unlocking US $900 million–1.2 billion in trade each year and totaling up to US $12 billion over ten years. This framework, set out in a ministerial statement by Minister in the Presidency Khumbudzo Ntshavheni, was published on the government news agency website shortly after the White House meeting but has since been temporarily removed due to technical issues. (Reuters). Proposed LNG Imports and Economic Impact. South Africa's pivot from coal-fired power towards cleaner natural gas is driven by chronic energy shortfalls at Eskom, the state utility, and dwindling supplies from Mozambique's Temane and Pande fields. U.S. LNG would serve as a vital complement to pipeline deliveries, ensuring continuity of gas for power generation, petrochemicals, and industrial users. Analysis by the U.S. Energy Information Administration shows that the United States exported a record 93 billion cubic meters of LNG in 2024, making it the world's largest exporter. Locking in a long-term supply contract at “appropriate” market-linked prices would help South Africa manage fuel costs and hedge against volatility in pipeline tariffs. (Offshore Technology). Beyond energy security, the trade in LNG is expected to deepen financial flows between the two countries—spurring investments in port infrastructure, storage terminals, and regasification units. South Africa has signaled it is open to U.S. investment in gas infrastructure and technology transfer, including hydraulic fracturing (“fracking”) know-how, to develop domestic resources in the Karoo region once an existing moratorium is lifted. (World Energy News)"
   },
   {
-    "title": "Edward Kieswetter is on the hunt for an extra R20 billion",
-    "category": "Finance",
-    "website": "businesstech.co.za",
-    "description": "Edward Kieswetter is on the hunt for an extra R20 billion",
-    "image": "",
-    "publisher": "BusinessTech",
-    "published_at": "21 May 2025",
-    "content": ""
-  },
-  {
-    "title": "Inflation beats Reserve Bank target for another month",
-    "category": "Finance",
-    "website": "businesstech.co.za",
-    "description": "Inflation beats Reserve Bank target for another month",
-    "image": "",
-    "publisher": "BusinessTech",
-    "published_at": "21 May 2025",
-    "content": ""
-  },
-  {
-    "title": "SARS is coming after employers in South Africa for these 4 things",
-    "category": "Finance",
-    "website": "businesstech.co.za",
-    "description": "SARS is coming after employers in South Africa for these 4 things",
-    "image": "",
-    "publisher": "BusinessTech",
-    "published_at": "20 May 2025",
-    "content": ""
-  },
-  {
-    "title": "The one thing that could stop an interest rate cut next week",
-    "category": "Finance",
-    "website": "businesstech.co.za",
-    "description": "The one thing that could stop an interest rate cut next week",
-    "image": "",
-    "publisher": "BusinessTech",
-    "published_at": "20 May 2025",
-    "content": ""
-  },
-  {
-    "title": "New twist shakes up interest rate expectations in South Africa",
-    "category": "Finance",
-    "website": "businesstech.co.za",
-    "description": "New twist shakes up interest rate expectations in South Africa",
-    "image": "",
-    "publisher": "BusinessTech",
-    "published_at": "19 May 2025",
-    "content": ""
-  },
-  {
-    "title": "The South African stock that went from R1,000 to R22,000 in 5 years",
-    "category": "Finance",
-    "website": "businesstech.co.za",
-    "description": "The South African stock that went from R1,000 to R22,000 in 5 years",
-    "image": "",
-    "publisher": "BusinessTech",
-    "published_at": "18 May 2025",
-    "content": ""
-  },
-  {
-    "title": "SARS going after South Africans who buy these two things",
-    "category": "Finance",
-    "website": "businesstech.co.za",
-    "description": "SARS going after South Africans who buy these two things",
-    "image": "",
-    "publisher": "BusinessTech",
-    "published_at": "17 May 2025",
-    "content": ""
-  },
-  {
-    "title": "South Africans owed more than R89 billion in unclaimed benefits – how to get your money",
-    "category": "Finance",
-    "website": "businesstech.co.za",
-    "description": "South Africans owed more than R89 billion in unclaimed benefits – how to get your money",
-    "image": "",
-    "publisher": "BusinessTech",
-    "published_at": "16 May 2025",
-    "content": ""
-  },
-  {
-    "title": "Business Talk – Standard Bank Insurance Brokers CEO Linah Mabena on bridging the insurance gap in South Africa",
-    "category": "Finance",
-    "website": "businesstech.co.za",
-    "description": "Business Talk – Standard Bank Insurance Brokers CEO Linah Mabena on bridging the insurance gap in South Africa",
-    "image": "",
-    "publisher": "BusinessTech",
-    "published_at": "16 May 2025",
-    "content": ""
-  },
-  {
-    "title": "South Africa takes a hit",
-    "category": "Finance",
-    "website": "businesstech.co.za",
-    "description": "South Africa takes a hit",
-    "image": "",
-    "publisher": "BusinessTech",
-    "published_at": "14 May 2025",
-    "content": ""
-  },
-  {
-    "title": "All eyes on South Africa's big R73 billion problem",
-    "category": "Finance",
-    "website": "businesstech.co.za",
-    "description": "All eyes on South Africa's big R73 billion problem",
-    "image": "",
-    "publisher": "BusinessTech",
-    "published_at": "14 May 2025",
-    "content": ""
-  },
-  {
-    "title": "Good news for interest rates in South Africa could come sooner than expected",
-    "category": "Finance",
-    "website": "businesstech.co.za",
-    "description": "Good news for interest rates in South Africa could come sooner than expected",
-    "image": "",
-    "publisher": "BusinessTech",
-    "published_at": "13 May 2025",
-    "content": ""
-  },
-  {
-    "title": "SARS coming after one group of South Africans hard",
-    "category": "Finance",
-    "website": "businesstech.co.za",
-    "description": "SARS coming after one group of South Africans hard",
-    "image": "",
-    "publisher": "BusinessTech",
-    "published_at": "13 May 2025",
-    "content": ""
-  },
-  {
-    "title": "The rand's true value is R9 per US Dollar",
-    "category": "Finance",
-    "website": "businesstech.co.za",
-    "description": "The rand's true value is R9 per US Dollar",
-    "image": "",
-    "publisher": "BusinessTech",
-    "published_at": "13 May 2025",
-    "content": ""
-  },
-  {
-    "title": "South Africans forced to use credit to buy food",
-    "category": "Finance",
-    "website": "businesstech.co.za",
-    "description": "South Africans forced to use credit to buy food",
-    "image": "",
-    "publisher": "BusinessTech",
-    "published_at": "11 May 2025",
-    "content": ""
-  },
-  {
-    "title": "Tiger Brands delivers strong half-year, trims non-core businesses.",
+    "title": "Tau confirms Sizekhaya Holdings as new lottery operator",
     "category": "Business",
     "website": "moneyweb.co.za",
-    "description": "Tiger Brands delivers strong half-year, trims non-core businesses.",
+    "description": "Tau confirms Sizekhaya Holdings as new lottery operator.",
     "image": "",
     "publisher": "Moneyweb",
-    "published_at": "May 2025",
-    "content": ""
+    "published_at": "2025-05-28",
+    "content": "Tau confirms Sizekhaya Holdings as new lottery operator. 28 May 2025 / Moneyweb."
   },
   {
-    "title": "Ramaphosa dismisses criticism of SA's empowerment laws.",
-    "category": "Politics",
+    "title": "30% electricity tariff increase is a reality, says Erasa",
+    "category": "Finance",
     "website": "moneyweb.co.za",
-    "description": "Ramaphosa dismisses criticism of SA's empowerment laws.",
+    "description": "A 30% electricity tariff increase is a reality, says Erasa.",
     "image": "",
     "publisher": "Moneyweb",
-    "published_at": "May 2025",
-    "content": ""
+    "published_at": "2025-05-28",
+    "content": "30% electricity tariff increase is a reality, says Erasa. 28 May 2025 / Antoinette Slabbert."
   },
   {
-    "title": "Malatsi: No special treatment for Starlink.",
-    "category": "Technology",
-    "website": "moneyweb.co.za",
-    "description": "Malatsi: No special treatment for Starlink.",
-    "image": "",
-    "publisher": "Moneyweb",
-    "published_at": "May 2025",
-    "content": ""
-  },
-  {
-    "title": "Anglo's platinum miner flies solo with long-term demand in flux.",
-    "category": "Business",
-    "website": "moneyweb.co.za",
-    "description": "Anglo's platinum miner flies solo with long-term demand in flux.",
-    "image": "",
-    "publisher": "Moneyweb",
-    "published_at": "May 2025",
-    "content": ""
-  },
-  {
-    "title": "Liberty sees 18% jump in income protection payouts.",
+    "title": "Liberty sees 18% jump in income protection payouts",
     "category": "Finance",
     "website": "moneyweb.co.za",
     "description": "Liberty sees 18% jump in income protection payouts.",
     "image": "",
     "publisher": "Moneyweb",
-    "published_at": "May 2025",
-    "content": ""
+    "published_at": "2025-05-28",
+    "content": "Liberty sees 18% jump in income protection payouts. 28 May 2025 / Liesl Peyper."
   },
   {
-    "title": "African brands hit record low in Brand Africa 100 rankings.",
-    "category": "Business",
-    "website": "moneyweb.co.za",
-    "description": "African brands hit record low in Brand Africa 100 rankings.",
-    "image": "",
-    "publisher": "Moneyweb",
-    "published_at": "May 2025",
-    "content": ""
-  },
-  {
-    "title": "SA companies aren't innovating enough.",
-    "category": "Business",
-    "website": "moneyweb.co.za",
-    "description": "SA companies aren't innovating enough.",
-    "image": "",
-    "publisher": "Moneyweb",
-    "published_at": "May 2025",
-    "content": ""
-  },
-  {
-    "title": "SA lawmakers slam Starlink plan over 'back door' entry.",
-    "category": "Politics",
-    "website": "moneyweb.co.za",
-    "description": "SA lawmakers slam Starlink plan over 'back door' entry.",
-    "image": "",
-    "publisher": "Moneyweb",
-    "published_at": "May 2025",
-    "content": ""
-  },
-  {
-    "title": "South Africa mining group says advice on draft law ignored.",
-    "category": "Business",
-    "website": "moneyweb.co.za",
-    "description": "South Africa mining group says advice on draft law ignored.",
-    "image": "",
-    "publisher": "Moneyweb",
-    "published_at": "May 2025",
-    "content": ""
-  },
-  {
-    "title": "'92% of Coronation funds outperformed their benchmarks'",
+    "title": "Standard Bank slammed in court after repossessing and auctioning Soweto home for R200",
     "category": "Finance",
     "website": "moneyweb.co.za",
-    "description": "'92% of Coronation funds outperformed their benchmarks'",
+    "description": "Standard Bank slammed in court after repossessing and auctioning Soweto home for R200.",
     "image": "",
     "publisher": "Moneyweb",
-    "published_at": "May 2025",
-    "content": ""
+    "published_at": "2025-05-28",
+    "content": "Standard Bank slammed in court after repossessing and auctioning Soweto home for R200. 28 May 2025 / Ciaran Ryan."
   },
   {
-    "title": "Two-pot impact on retirement planning.",
+    "title": "Ramaphosa targets R3trn private sector infrastructure boom",
     "category": "Finance",
     "website": "moneyweb.co.za",
-    "description": "Two-pot impact on retirement planning.",
+    "description": "Ramaphosa targets R3trn private sector infrastructure boom.",
     "image": "",
     "publisher": "Moneyweb",
-    "published_at": "May 2025",
-    "content": ""
-  },
-  {
-    "title": "12m overindebted South Africans.",
-    "category": "Finance",
-    "website": "moneyweb.co.za",
-    "description": "12m overindebted South Africans.",
-    "image": "",
-    "publisher": "Moneyweb",
-    "published_at": "May 2025",
-    "content": ""
-  },
-  {
-    "title": "The company buying South Africa's Renergen",
-    "category": "Business",
-    "website": "dailyinvestor.com",
-    "description": "ASP Isotopes announced that it plans to acquire Renergen. Here is a look at what ASP Isotopes does and its current financial position.",
-    "image": "",
-    "publisher": "Daily Investor",
-    "published_at": "May 2025",
-    "content": ""
+    "published_at": "2025-05-28",
+    "content": "Ramaphosa targets R3trn private sector infrastructure boom. 28 May 2025 / Roy Cokayne."
   }
 ]
 </result>
-
-Please note that I was unable to access the full content of the articles or their images due to limitations with the browsing tool. The tool consistently returned "Not able to browse the provided url. Please use the url in the search results" when attempting to access live websites directly, and using the `vertexaisearch` URLs only provided the search result snippets, not the full web page content.
-
-Therefore, the `image` and `content` fields in the JSON are empty. I have provided 33 articles, but I was unable to reach the target of at least 50 with full content. The descriptions are either directly from the search snippets or inferred from the article titles where a description was not explicitly provided in the snippet. The `published_at` dates are based on the information available in the snippets; where a precise date was not given, "May 2025" is used to indicate recent publication.
