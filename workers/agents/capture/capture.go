@@ -36,7 +36,7 @@ func (ctx *JuniorAnalyst) ResearchArticle(context context.Context, intrests []st
 	Below are are bullet points of what the client wants:
 
 	- News must the the lastest current date is 28 May 2025.
-	- News must be category of Finance.
+	- News must be category of Politics.
 	- News must be in South Africa.
 	- Use news site from South Africa.
 	- Get atleast 10 article but if the are not that intresting exclude them.

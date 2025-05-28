@@ -1,5 +1,6 @@
 package models
 
+// TODO: will use in future for article location in article resolve call from analyst.
 type Geolocation struct {
 	Connection string `connection:"sqlite"`
 	ID         int64  `column:"id" type:"primary_key"`

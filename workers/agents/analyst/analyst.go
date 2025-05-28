@@ -82,19 +82,19 @@ func ValidateArticle(context context.Context, article *models.ArticleCaputure) (
 	get content from trust source and build the article content please the content must atleast be 120 words:
 
 	Title:
-	Standard Bank slammed in court after repossessing and auctioning Soweto home for R200
+	State measures in place to cushion poor amid rising living costs — Ramaphosa
 
 	Published At:
-	16 May 2025
+	22 May 2025
 
 	Category:
-	Finance
+	Politics
 
 	Description:
-	1992 property loan sparks 30-year fight.
-
+	President Cyril Ramaphosa stated that his government has implemented measures to protect low-income South Africans from rising living costs, including macroeconomic policies and social welfare initiatives, despite a significant increase in the household food basket.
+	
 	Article Content:
-	Standard Bank faced legal action after controversially repossessing and auctioning a Soweto home for a mere R200, a move stemming from a property loan dispute initiated in 1992 that has now escalated into a three-decade legal battle.
+	President Cyril Ramaphosa says his government, the Government of National Unity (GNU), has implemented adequate measures to protect low-income South Africans from the rising cost of necessities. This comes as the average household food basket has increased by nearly 40% relative to inflation. Ramaphosa emphasised that the government was fully aware of the financial pressures facing citizens and remains committed to supporting the most vulnerable through targeted relief measures. He was responding to oral questions in Parliament, Cape Town on Tuesday. “Government recognises the high cost of living facing South Africans. “Tackling poverty and the cost of living is one of the three strategic priorities of the GNU and forms a central pillar of the Medium TermDevelopment Plan. “South Africa's macroeconomic policy framework has been a key lever for shielding the poor from the high cost of living,” he said. Ramaphosa mentioned that the framework included an inflation target, which has helped to keep prices low and stable and has been important in reducing average prices. “Food price inflation has fallen quite significantly from 12.7 percent at the end of 2022 to 2.2 percent in March 2025. “Headline inflation, which is a measure of the general cost of living, has also declined, averaging 4.4 percent in 2024 and inflation has even moderated further to 2.7 percent in March 2025,” he said. “Food staples, such as maize meal, brown bread, rice, samp, milk, eggs, and other basic foodstuffs remain exempt from VAT, to help to cushion lower-income households in our country. “Our fiscal policy has been redistributive, prioritising poor and low-income households. The government spends around 60 percent of its revenue on the social wage, which includes spending on social grants on education and health.” Last week, Finance Minister Enoch Godongwana, presented his 2025 national budget, without Value-Added-Tax (VAT) but social grants were increased at a rate higher than inflation. The provision of free basic services, such as water and electricity, for indigent households is an essential measure in reducing the high cost of living. “This package of free municipal services continues to be a key tool for reducing poverty and inequality, and raising living standards and facilitating access to greater economic opportunities for many of our people.
 
 
 	Our system whats the result in JSON object in array containing the following interface and

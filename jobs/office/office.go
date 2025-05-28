@@ -24,8 +24,12 @@ type Office struct {
 	JuniorAnalyst JuniorAnalyst
 }
 
-// TODO: Whats happing in the office 2
-func (ctx *Office) OfficeActive1() {}
+// Comment
+func (ctx *Office) LoadLatestNews() {
 
-// TODO: Whats happing in the office 2
-func (ctx *Office) OfficeActive2() {}
+}
+
+// Comment
+func (ctx *Office) LoadLatestNewsClients() {
+
+}

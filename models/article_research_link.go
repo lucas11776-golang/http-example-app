@@ -8,7 +8,7 @@ type ArticleCaputure struct {
 	Connection  string    `connection:"sqlite"`
 	ID          int64     `column:"id" type:"primary_key"`
 	CreatedAt   time.Time `column:"created_at" type:"datetime_current"`
-	Website     string    `json:"website" column:"website" type:"string"`
+	Source      string    `json:"website" column:"website" type:"string"`
 	Title       string    `json:"title" column:"title" type:"string"`
 	Image       string    `json:"image" column:"image" type:"string"`
 	Category    string    `json:"category" column:"category" type:"string"`
