@@ -19,9 +19,13 @@ type JuniorAnalyst interface {
 	ArticlesByClientIntrests(context context.Context, client *models.Client)
 }
 
+type GraphicDesigner interface {
+}
+
 type Office struct {
-	SeniorAnalyst SeniorAnalyst
-	JuniorAnalyst JuniorAnalyst
+	SeniorAnalyst   SeniorAnalyst
+	JuniorAnalyst   JuniorAnalyst
+	GraphicDesigner GraphicDesigner
 }
 
 // Comment
