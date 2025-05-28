@@ -38,7 +38,6 @@ func (ctx *JuniorAnalyst) ResearchArticle(context context.Context, intrests []st
 	- News must be in South Africa.
 	- Use news site from South Africa.
 	- Get atleast 50 article but if the are not that intresting exclude them.
-	- Visit this URL (https://www.news24.com/) and get some articles 
 
 	After you are done analyzing the news article data please format the articles in JSON object in array containing the following interface and
 	place the data inside <result><result> also do not include ` + "```json ``` in results." + `

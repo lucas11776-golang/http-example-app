@@ -1,17 +1,18 @@
 <result>
-{
-  "rating": 8,
-  "trusted": [
-    "Fin24",
-    "BusinessTech",
-    "Daily Maverick",
-    "News24",
-    "National Treasury (official statements/reports)",
-    "Bureau for Economic Research (BER)"
-  ],
-  "untrusted": [],
-  "content": "South Africa faces persistent fiscal pressures, prompting economists and financial institutions to issue warnings regarding a potential increase in the Value-Added Tax (VAT) rate. With national debt remaining a significant concern and the need to fund essential public services, the National Treasury is constantly exploring avenues to bolster revenue. While no official announcement has been made, experts from institutions like the Bureau for Economic Research (BER) and various banking groups have highlighted that raising VAT from its current 15% could be considered, especially if other revenue-generating measures or significant expenditure cuts prove insufficient.\n\nSuch a move, however, would be highly contentious. Critics argue that a VAT increase disproportionately affects lower-income households, exacerbating inequality in an already strained economy. Labour unions and civil society organizations typically advocate for alternative solutions, including combating illicit financial flows, improving tax collection efficiency, and stimulating robust economic growth to broaden the tax base. The debate intensifies ahead of key fiscal policy announcements, as the government navigates the delicate balance between financial stability and socio-economic impact.",
-  "html": "<p>South Africa faces persistent fiscal pressures, prompting economists and financial institutions to issue warnings regarding a potential increase in the Value-Added Tax (VAT) rate.</p><p>With national debt remaining a significant concern and the need to fund essential public services, the National Treasury is constantly exploring avenues to bolster revenue. While no official announcement has been made, experts from institutions like the <b>Bureau for Economic Research (BER)</b> and various banking groups have highlighted that raising VAT from its current 15% could be considered, especially if other revenue-generating measures or significant expenditure cuts prove insufficient.</p><p>Such a move, however, would be highly contentious. Critics argue that a VAT increase disproportionately affects lower-income households, exacerbating inequality in an already strained economy. Labour unions and civil society organizations typically advocate for alternative solutions, including combating illicit financial flows, improving tax collection efficiency, and stimulating robust economic growth to broaden the tax base. The debate intensifies ahead of key fiscal policy announcements, as the government navigates the delicate balance between financial stability and socio-economic impact.</p>",
-  "description": "South Africa faces warnings of a potential VAT increase due to persistent fiscal pressures and national debt. Economists suggest it could be considered to boost revenue, but critics highlight its regressive impact on lower-income households, advocating for alternative fiscal reforms and economic growth."
-}
+[
+  {
+    "rating": 9,
+    "trusted": [
+      "News24",
+      "BusinessTech",
+      "IOL (Independent Online)",
+      "Moneyweb",
+      "Financial Sector Conduct Authority (FSCA)"
+    ],
+    "untrusted": [],
+    "content": "South Africans are currently owed a staggering sum of over R90 billion in unclaimed pension and provident fund benefits. This substantial amount represents funds that were never claimed by beneficiaries or former members of retirement funds, often due to changes in employment, emigration, or simply a lack of awareness. The Financial Sector Conduct Authority (FSCA) oversees these funds and urges individuals to check if they are owed money. To claim these benefits, individuals can typically start by contacting the FSCA directly or using their online unclaimed benefit search tool. It is crucial to have personal identification details and any relevant fund information available. Many retirement funds also have their own databases. Beware of fraudulent schemes promising to help claim funds for a fee; legitimate claims processes do not require upfront payments. This money can significantly impact individuals' financial well-being, making it vital to follow official channels and ensure all legitimate claims are processed.",
+    "html": "<p>South Africans are currently owed a staggering sum of over <b>R90 billion</b> in unclaimed pension and provident fund benefits. This substantial amount represents funds that were never claimed by beneficiaries or former members of retirement funds, often due to changes in employment, emigration, or simply a lack of awareness.</p><p>The <b>Financial Sector Conduct Authority (FSCA)</b> oversees these funds and urges individuals to check if they are owed money.</p><p>To claim these benefits, individuals can typically start by contacting the <b>FSCA directly</b> or using their online unclaimed benefit search tool. It is crucial to have personal identification details and any relevant fund information available. Many retirement funds also have their own databases.</p><p><b>Beware of fraudulent schemes</b> promising to help claim funds for a fee; legitimate claims processes do not require upfront payments. This money can significantly impact individuals' financial well-being, making it vital to follow official channels and ensure all legitimate claims are processed.</p>",
+    "description": "Over R90 billion in unclaimed pension and provident fund benefits are owed to South Africans. The FSCA encourages individuals to use official channels, like their online search tool, to check and claim these funds. Be cautious of scams; legitimate processes don't require upfront fees."
+  }
+]
 </result>
