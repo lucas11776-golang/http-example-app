@@ -20,7 +20,7 @@ type SeniorAnalyst struct {
 
 // Comment
 // Ask is week promp just for test workflow of Scraper and Analyst.
-func ValidateArticle(context context.Context, article *models.ArticleCaputure) (*models.Article, error) {
+func (ctx *SeniorAnalyst) ValidateArticle(context context.Context, article *models.ArticleCaputure) (*models.Article, error) {
 	client, err := genai.NewClient(context, &genai.ClientConfig{
 		APIKey:  env.Env("AI_KEY_AI"),
 		Backend: genai.BackendGeminiAPI,
@@ -158,7 +158,7 @@ type ArticeImageDescription struct {
 }
 
 // Comment
-func DescribeArticle(context context.Context, article any) (*ArticeImageDescription, error) {
+func (ctx *SeniorAnalyst) DescribeArticle(context context.Context, article any) (*ArticeImageDescription, error) {
 
 	client, err := genai.NewClient(context, &genai.ClientConfig{
 		APIKey:  env.Env("AI_KEY_AI"),
@@ -277,8 +277,6 @@ func DescribeArticle(context context.Context, article any) (*ArticeImageDescript
 	if err != nil {
 		return nil, err
 	}
-
-	// return articles, nil
 
 	return nil, nil
 }

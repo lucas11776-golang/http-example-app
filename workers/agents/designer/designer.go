@@ -34,7 +34,7 @@ func (ctx *GraphicDesigner) DesignArticleImage(context context.Context, intrests
 	You are a senior graphic designer working for a analyst company that analyses the web for news,
 	You are working close with a senior analyst that requires you to design article image base on this concept:
 
-	Below concept you should use.
+	Below concept you should use:
 	A visually striking concept featuring a stylized, assertive profile of Donald Trump, perhaps with an outstretched hand gesture as if presenting or imposing something. Emanating from his hand or as an extension of his rhetorical stance, a bold, distinct label or speech bubble shape prominently displays the text "AFRIKANER REFUGEES." However, this label is visually depicted as fragmented, cracked, or actively disintegrating into digital dust or pixels, symbolizing its falsity and the article's "unpacking" of the claim. In the background, subtly rendered and slightly out of focus, are elements suggestive of South Africa, such as the vibrant colors of its flag, a faint outline of its map, or a hint of an iconic natural landscape. The overall mood should be serious and analytical, highlighting the political opportunism and the fabricated nature of the claim.
 	`
 
@@ -49,9 +49,6 @@ func (ctx *GraphicDesigner) DesignArticleImage(context context.Context, intrests
 
 	result, err := client.Models.GenerateContent(context, env.Env("AI_MODEL_IMAGE"), content, &genai.GenerateContentConfig{
 		ResponseModalities: []string{"TEXT", "IMAGE"},
-		// ThinkingConfig: &genai.ThinkingConfig{
-		// 	IncludeThoughts: true,
-		// },
 	})
 
 	if err != nil {
@@ -67,28 +64,6 @@ func (ctx *GraphicDesigner) DesignArticleImage(context context.Context, intrests
 			_ = os.WriteFile(outputFilename, imageBytes, 0644)
 		}
 	}
-
-	// if err != nil {
-	// 	return nil, err
-	// }
-
-	// matches := RESULT_REGEX.FindStringSubmatch(response.Text())
-
-	// file, _ := os.Create("cache.txt")
-
-	// file.Write([]byte(response.Text()))
-
-	// if len(matches) == 0 {
-	// 	return []models.ArticleCaputure{}, nil
-	// }
-
-	// var articles []models.ArticleCaputure
-
-	// err = json.Unmarshal([]byte(matches[0]), &articles)
-
-	// if err != nil {
-	// 	return nil, err
-	// }
 
 	return nil, nil
 }

@@ -4,16 +4,16 @@ import (
 	"context"
 	"fmt"
 	"server/bootstrap"
-	"server/env"
 	"server/workers/agents/analyst"
 	"server/workers/agents/capture"
 	"server/workers/agents/designer"
 )
 
+// Comment
 func juniorAnalyst() {
-	worker := &capture.JuniorAnalyst{}
+	juniorAnalyst := &capture.JuniorAnalyst{}
 
-	links, err := worker.ResearchArticle(context.Background(), []string{})
+	links, err := juniorAnalyst.ResearchArticle(context.Background(), []string{})
 
 	if err != nil {
 		panic(err)
@@ -22,42 +22,51 @@ func juniorAnalyst() {
 	fmt.Println(links)
 }
 
+// Comment
 func seniorAnalyst() {
-	news, err := analyst.ValidateArticle(context.Background(), nil)
+	seniorAnalyst := &analyst.SeniorAnalyst{}
+
+	article, err := seniorAnalyst.ValidateArticle(context.Background(), nil)
 
 	if err != nil {
 		panic(err)
 	}
 
-	fmt.Println(news)
+	fmt.Println(article)
 }
 
+// Comment
 func seniorAnalystArticleDescription() {
-	news, err := analyst.DescribeArticle(context.Background(), nil)
+	seniorAnalyst := &analyst.SeniorAnalyst{}
+
+	description, err := seniorAnalyst.DescribeArticle(context.Background(), nil)
 
 	if err != nil {
 		panic(err)
 	}
 
-	fmt.Println(news)
+	fmt.Println(description)
 }
 
+// Comment
 func seniorGraphicDesign() {
-	worker := &designer.GraphicDesigner{}
+	graphicDesigner := &designer.GraphicDesigner{}
 
-	links, err := worker.DesignArticleImage(context.Background(), []string{})
+	image, err := graphicDesigner.DesignArticleImage(context.Background(), []string{})
 
 	if err != nil {
 		panic(err)
 	}
 
-	fmt.Println(links)
+	fmt.Println(image)
 }
 
 func main() {
 	_ = bootstrap.Boot(".env")
 
-	fmt.Printf("\r\nRunning Server %s:%d\r\n", env.Env("HOST"), env.EnvInt("PORT"))
+	// fmt.Printf("\r\nRunning Server %s:%d\r\n", env.Env("HOST"), env.EnvInt("PORT"))
+
+	fmt.Println("Working Hard")
 
 	// juniorAnalyst()
 	// seniorAnalyst()

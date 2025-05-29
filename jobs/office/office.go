@@ -1,31 +1,18 @@
 package office
 
-import (
-	"context"
-	"server/models"
-)
-
-type SeniorAnalyst interface {
-	ArticleValidate()
-}
-
-type OperationManager interface {
-	PublishArticle(context context.Context, article models.ArticleCaputure)
-	PublishClientArticle(context context.Context, client models.Client, article models.ArticleCaputure)
-}
-
-type JuniorAnalyst interface {
-	Articles(context context.Context)
-	ArticlesByClientIntrests(context context.Context, client *models.Client)
-}
-
-type GraphicDesigner interface {
-}
-
+// TODO: May need to rename and move to workspace so everyone can have access to each one
+// e.g When a JuniorAnalyst is done the can submit to SeniorAnalyst.
 type Office struct {
-	SeniorAnalyst   SeniorAnalyst
-	JuniorAnalyst   JuniorAnalyst
-	GraphicDesigner GraphicDesigner
+	OperationManager OperationManager
+	SeniorAnalyst    SeniorAnalyst
+	JuniorAnalyst    JuniorAnalyst
+	GraphicDesigner  GraphicDesigner
+}
+
+func NewOffice() (*Office, error) {
+	office := &Office{}
+
+	return office, nil
 }
 
 // Comment

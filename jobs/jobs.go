@@ -4,4 +4,6 @@ type Jobs struct {
 }
 
 // Do something to start job...
-func (ctx *Jobs) MainForJobs() {}
+func (ctx *Jobs) ManageOfficeActivities() {
+
+}

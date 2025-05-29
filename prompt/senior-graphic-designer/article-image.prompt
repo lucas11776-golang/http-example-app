@@ -1,20 +1,5 @@
 You are a senior graphic designer working for a analyst company that analyses the web for news,
-You are working close with a senior analyst that requires you to design article image base on key points given to you by senior analyst.
+You are working close with a senior analyst that requires you to design article image base on this concept:
 
-Below are are bullet points of what the senior analyst wants:
-
-- The image must be based on article key points.
-- The image must be realistic.
-- The image must be aligned with the title and content of the article.
-
-
-Below is article you will be working one.
-
-Title:
-President Ramaphosa Unveils Comprehensive Plan to Cushion South Africans from Rising Living Costs
-
-Category:
-Politics
-
-Article Content:
-President Cyril Ramaphosa has affirmed that his Government of National Unity (GNU) has implemented comprehensive measures aimed at protecting low-income South Africans amidst the persistent challenge of rising living costs. Speaking in Parliament, Cape Town, the President acknowledged the significant financial pressures facing citizens, noting that the average household food basket has increased by nearly 40% relative to inflation, yet stressed the government's unwavering commitment to supporting the most vulnerable.\n\nRamaphosa highlighted that tackling poverty and the cost of living stands as one of the three strategic priorities of the GNU, forming a core pillar of the Medium Term Development Plan. He underscored the crucial role of South Africa's macroeconomic policy framework in shielding the poor. This framework, he explained, includes a disciplined inflation target that has been instrumental in maintaining price stability and reducing average prices.\n\nProviding specific figures, the President stated that food price inflation has notably decreased from 12.7% at the end of 2022 to 2.2% in March 2025. Similarly, headline inflation, a key indicator of the general cost of living, averaged 4.4% in 2024 and further moderated to 2.7% by March 2025.\n\nFurther outlining relief efforts, Ramaphosa confirmed that essential food staples such as maize meal, brown bread, rice, samp, milk, and eggs remain exempt from Value-Added Tax (VAT) to provide relief to lower-income households. He also pointed to the redistributive nature of fiscal policy, with approximately 60% of government revenue allocated to the social wage, encompassing vital spending on social grants, education, and health. This aligns with the 2025 national budget presented by Finance Minister Enoch Godongwana, which saw social grants increased above inflation rates.\n\nAdditionally, the provision of free basic municipal services, including water and electricity, for indigent households remains a cornerstone measure in mitigating the high cost of living. Ramaphosa concluded by emphasizing that this package of free services is vital for reducing poverty and inequality, elevating living standards, and fostering greater economic opportunities for many South Africans.
+Below concept you should use:
+{{ concept }}
