@@ -1,26 +1,30 @@
 package office
 
-// TODO: May need to rename and move to workspace so everyone can have access to each one
-// e.g When a JuniorAnalyst is done the can submit to SeniorAnalyst.
+import (
+	"server/jobs/office/employees/analyst/junior"
+	"server/jobs/office/employees/analyst/senior"
+	"server/jobs/office/employees/manager"
+	"server/jobs/office/workspace"
+)
+
 type Office struct {
-	OperationManager OperationManager
-	SeniorAnalyst    SeniorAnalyst
-	JuniorAnalyst    JuniorAnalyst
-	GraphicDesigner  GraphicDesigner
+	workspace *workspace.Workspace
 }
 
-func NewOffice() (*Office, error) {
-	office := &Office{}
+func NewOffice() *Office {
+	workspace := &workspace.Workspace{}
 
-	return office, nil
+	workspace.OperationManager = manager.NewOperationManager(workspace)
+	workspace.SeniorAnalyst = senior.NewSeniorAnalyst(workspace)
+	workspace.SeniorGraphicDesigner = senior.NewSeniorAnalyst(workspace)
+	workspace.JuniorAnalyst = junior.NewJuniorAnalyst(workspace)
+
+	return &Office{workspace: workspace}
 }
 
-// Comment
-func (ctx *Office) LoadLatestNews() {
-
-}
-
-// Comment
-func (ctx *Office) LoadLatestNewsClients() {
-
+func (ctx *Office) Launch() {
+	go ctx.workspace.JuniorAnalyst.Work()
+	go ctx.workspace.SeniorAnalyst.Work()
+	go ctx.workspace.SeniorGraphicDesigner.Work()
+	go ctx.workspace.OperationManager.Work()
 }
