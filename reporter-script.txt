@@ -1,0 +1,53 @@
+<result>
+**Studio Scene Description:**
+The news studio is a modern, high-tech space. It features a sleek, dark wood and brushed metal anchor desk, centrally positioned. Behind the desk, a massive, curved LED video wall displays dynamic, high-resolution graphics and b-roll footage relevant to the current story. The lighting is bright, even, and flattering, designed to eliminate harsh shadows and highlight the on-air talent. Subtle cool blue and grey tones dominate the backdrop, providing a professional and authoritative atmosphere. Smaller monitor screens are subtly integrated into the desk for teleprompter access and live program feedback.
+
+**Reporter's Attire (Jane):**
+Jane should wear professional business attire. A well-tailored blazer in a solid, muted color (e.g., navy, charcoal grey, or deep emerald green) over a crisp, light-colored blouse (white, cream, or a soft pastel). Her hair should be neatly styled, pulled back or in a professional cut. Makeup should be professional and camera-ready, aiming for a natural yet polished look. Minimal, elegant jewelry (e.g., stud earrings, a delicate necklace) is recommended to avoid distractions and maintain a focus on the report. The attire should project credibility and seriousness, fitting for a financial segment.
+
+***
+
+**(SCENE START)**
+
+**(ANCHOR: BOB - sitting at the main desk, looking authoritative but approachable)**
+
+**BOB:** Welcome back. Global markets are bracing for significant economic shifts, and our financial reporter, Jane, has the details on two critical junctions: a key interest rate decision from the SARB and a major legal challenge to former President Trump's trade policies. Jane, over to you.
+
+**(REPORTER: JANE - standing in front of a large screen, looking confident and professional. She is facing the camera.)**
+
+**JANE:** (Looking directly at camera, with a professional and engaging demeanor) Thanks, Bob. Good evening. The global financial landscape is indeed buzzing with anticipation, focusing on upcoming decisions and impactful legal rulings that will shape economic directions.
+
+**(JANE turns slightly, gesturing towards the large screen behind her, which now displays the SARB logo and a chart of the Rand's performance.)**
+
+**JANE:** First, our attention turns to Pretoria, where financial markets are closely watching the South African Reserve Bank. The SARB is poised to announce its latest interest rate decision on May 29th. (PAUSE) The South African rand has shown relative stability against major currencies, trading around R17.93 against the U.S. dollar in recent sessions.
+
+**(GRAPHIC: SARB BUILDING/LOGO with "Anticipated 25 BPS Cut" or "Rates Unchanged" text appears on screen next to Jane.)**
+
+**JANE:** Economists, however, remain divided on the SARB's next move. A majority of analysts, polled by reputable financial news agencies like Reuters and Bloomberg, anticipate a 25-basis point cut to the main lending rate, aiming to stimulate economic growth.
+
+**JANE:** However, a notable contingent, including local economists, suggests the central bank might opt to keep rates unchanged, prioritizing inflation control amidst global uncertainties. The decision comes as markets also digest minutes from the U.S. Federal Reserve's latest policy meeting, seeking clues on the direction of global interest rates.
+
+**(JANE transitions smoothly. The screen behind her changes to display a graphic related to US courts or trade – perhaps a gavel or a map of the US.)**
+
+**JANE:** Concurrently, a landmark ruling here in the United States has delivered a major setback to the tariff policies implemented during the Trump administration. The US Court of International Trade has sided with various Democratic-led states and small businesses.
+
+**(VOICEOVER/B-ROLL: Quick montage of images related to steel mills, ports, shipping containers, and then a quick shot of a federal courthouse.)**
+
+**JANE:** A unanimous three-judge panel determined that former President Trump had wrongfully invoked a national security law – Section 232 – to justify imposing broad global tariffs on a range of imports, including steel and aluminum. This ruling significantly challenges the legal foundation of a central pillar of his past economic strategy, potentially impacting future trade policy discussions and opening the door for businesses to seek refunds on billions of dollars in tariffs.
+
+**(JANE transitions again. The screen behind her now displays the Eskom logo and a graphic illustrating electricity bill increases.)**
+
+**JANE:** And finally, Bob, domestically in South Africa, concerns continue to mount over electricity tariffs. The Electricity Resellers Association of South Africa, or ERASA, is deliberating its response to a looming 30% electricity tariff increase that is set to impact end-users in Eskom-supplied areas.
+
+**JANE:** Despite the National Energy Regulator of South Africa, NERSA, having approved an average increase of just over 12.7%, the actual costs passed on to consumers, particularly by resellers, are significantly higher due to various charges and complexities. This disparity has led to substantial jumps in recent electricity bills, underscoring ongoing challenges within the country's power sector and its direct impact on household and business finances.
+
+**(JANE turns back to face the main anchor desk, signaling the hand-off.)**
+
+**JANE:** Back to you, Bob.
+
+**(BOB - turns slightly to Jane, then back to camera.)**
+
+**BOB:** Thank you, Jane, for that comprehensive report on these critical economic developments shaping our world and local economy.
+
+**(SCENE END)**
+</result>
