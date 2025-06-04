@@ -1,7 +1,6 @@
 package senior
 
 import (
-	"fmt"
 	"server/jobs/office/workspace"
 	"time"
 )
@@ -19,14 +18,6 @@ func NewSeniorAnalyst(workspace *workspace.Workspace) *SeniorAnalyst {
 
 // Comment
 func (ctx *SeniorAnalyst) Work() {
-	ctx.activities()
-
 	for range time.Tick(time.Minute * 10) {
-		ctx.activities()
 	}
-}
-
-// Comment
-func (ctx *SeniorAnalyst) activities() {
-	fmt.Printf("%s is working hard\r\n", "SeniorAnalyst")
 }

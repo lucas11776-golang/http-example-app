@@ -1,7 +1,6 @@
 package junior
 
 import (
-	"fmt"
 	"server/jobs/office/workspace"
 	"time"
 )
@@ -19,19 +18,6 @@ func NewJuniorAnalyst(workspace *workspace.Workspace) *JuniorAnalyst {
 
 // Comment
 func (ctx *JuniorAnalyst) Work() {
-	ctx.activities()
-
 	for range time.Tick(time.Minute * 10) {
-		ctx.activities()
 	}
-}
-
-// Comment
-func (ctx *JuniorAnalyst) activities() {
-	go ctx.researchNews()
-}
-
-// Comment
-func (ctx *JuniorAnalyst) researchNews() {
-	fmt.Printf("%s is working hard\r\n", "JuniorAnalyst")
 }

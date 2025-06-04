@@ -7,6 +7,7 @@ import (
 	"server/workers/agents/analyst"
 	"server/workers/agents/capture"
 	"server/workers/agents/designer"
+	"server/workers/agents/studio/artist"
 	"server/workers/agents/studio/producer"
 )
 
@@ -75,6 +76,19 @@ func studioProducer() {
 	fmt.Println(image)
 }
 
+// Comment
+func voiceArtist() {
+	graphicDesigner := &artist.VoiceArtist{}
+
+	image, err := graphicDesigner.Read(context.Background(), nil)
+
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Println(image)
+}
+
 func main() {
 	_ = bootstrap.Boot(".env")
 
@@ -85,5 +99,6 @@ func main() {
 	// juniorAnalyst()
 	// seniorAnalyst()
 	// seniorAnalystArticleDescription()
-	studioProducer()
+	// studioProducer()
+	voiceArtist()
 }
