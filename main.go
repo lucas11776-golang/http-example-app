@@ -3,7 +3,9 @@ package main
 import (
 	"context"
 	"fmt"
+	"os"
 	"server/bootstrap"
+	"server/jobs"
 	"server/workers/agents/analyst"
 	"server/workers/agents/capture"
 	"server/workers/agents/designer"
@@ -80,7 +82,7 @@ func studioProducer() {
 func voiceArtist() {
 	graphicDesigner := &artist.VoiceArtist{}
 
-	image, err := graphicDesigner.Read(context.Background(), nil)
+	image, err := graphicDesigner.RecordArticle(context.Background(), nil)
 
 	if err != nil {
 		panic(err)
@@ -90,9 +92,18 @@ func voiceArtist() {
 }
 
 func main() {
+
 	_ = bootstrap.Boot(".env")
 
 	// fmt.Printf("\r\nRunning Server %s:%d\r\n", env.Env("HOST"), env.EnvInt("PORT"))
+
+	if len(os.Args[1]) > 1 && os.Args[1] == "jobs" {
+		jobs.Setup()
+
+		return
+	}
+
+	fmt.Println()
 
 	fmt.Println("Working Hard")
 
@@ -100,5 +111,5 @@ func main() {
 	// seniorAnalyst()
 	// seniorAnalystArticleDescription()
 	// studioProducer()
-	voiceArtist()
+	// voiceArtist()
 }

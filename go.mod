@@ -9,7 +9,7 @@ require (
 	github.com/joho/godotenv v1.5.1
 	github.com/lucas11776-golang/http v0.0.0-20250604145042-99f2d08e8dbd
 	github.com/lucas11776-golang/orm v0.0.0-20250519081433-db0d8c2d0ffd
-	google.golang.org/genai v1.8.0
+	google.golang.org/genai v1.9.0
 )
 
 require (

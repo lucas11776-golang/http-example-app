@@ -1,6 +1,7 @@
-package main
+package jobs
 
 import (
+	"context"
 	"server/jobs/office"
 )
 
@@ -8,8 +9,8 @@ type Jobs struct {
 	Office *office.Office
 }
 
-func main() {
-	office.NewOffice().Launch()
+func Setup() {
+	office.NewOffice().Launch(context.Background())
 
 	select {}
 }

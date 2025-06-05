@@ -49,28 +49,36 @@ Below is the article you analyze and give feedback one more key point the articl
 get content from trust source and build the article content please the content must atleast be 120 words:
 
 Title:
-VAT increase warning for South Africa
+{{ article.Title }}
 
 Published At:
-27 May 2025
+{{ formatTime(article.PublishedAt) }}
 
 Category:
-Finance
+{{ article.Category }}
 
 Description:
-Close call for interest rates in South Africa this week
+{{ article.Description }}
 
 Article Content:
+{{ article.Content }}
 
 
-Our system whats the result in JSON object in array containing the following interface and
+Our system whats the result in JSON object containing the following interface and
 place the data inside <result><result> also do not include` + "```json ``` in results." + `
 
 interface Article {
     rating: number;         // Article rating out of 10 not float only decimals.
-    trusted: []string;      // Trusted source reported on article only the name.
-    untrusted: []string;    // Untrusted source reported on article.
-    content: string;        // Update article base on all trusted source.
-    html: string;        	// Update article base on all trusted source - in html please make the content easy readable here by apply br,b etc.
-    description: string;    // Short summary of article within 20-50 words.
+    trusted: [{
+        "name": string     // Name of the source;
+        "website": srtring // Website address of source
+    }];                    // Trusted sources reported on article only the name.
+    untrusted: [{
+        "name": string     // Name of the source;
+        "website": srtring // Website address of source
+    }];                    // Untrusted sources reported on article.
+    title: string;          // Get the article a attractive title that will want the use to read it.
+    content: string;       // Update article base on all trusted source.
+    html: string;          // Update article base on all trusted source - in html please make the content easy readable here by apply br,b etc.
+    description: string;   // Short summary of article within 20-50 words.
 }

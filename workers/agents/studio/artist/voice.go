@@ -18,7 +18,7 @@ type ArticleAudio struct {
 }
 
 // Comment
-func (ctx *VoiceArtist) Read(context context.Context, article any) (*ArticleAudio, error) {
+func (ctx *VoiceArtist) RecordArticle(context context.Context, article any) (*ArticleAudio, error) {
 	client, err := genai.NewClient(context, &genai.ClientConfig{
 		APIKey:  env.Env("AI_KEY_AI"),
 		Backend: genai.BackendGeminiAPI,
@@ -48,7 +48,6 @@ func (ctx *VoiceArtist) Read(context context.Context, article any) (*ArticleAudi
 			VoiceConfig: &genai.VoiceConfig{
 				PrebuiltVoiceConfig: &genai.PrebuiltVoiceConfig{
 					// VoiceName: "Algieba",
-
 					VoiceName: "Gacrux",
 				},
 			},
@@ -61,7 +60,7 @@ func (ctx *VoiceArtist) Read(context context.Context, article any) (*ArticleAudi
 
 	data := response.Candidates[0].Content.Parts[0].InlineData.Data
 
-	mic, err := audio.NewMic().Wave().Record("./temp/article-audio.wav", data)
+	mic, err := audio.NewMic().Wave().Record("./temp/article-audio", data)
 
 	if err != nil {
 		return nil, err

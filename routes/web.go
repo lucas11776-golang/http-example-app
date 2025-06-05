@@ -16,3 +16,7 @@ func Web(route *http.Router) {
 		route.Get("{category}", news.Category)
 	})
 }
+
+func WEB(route *http.Router) {
+
+}

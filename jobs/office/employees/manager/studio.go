@@ -1,8 +1,7 @@
 package manager
 
 import (
-	"server/jobs/office/workspace"
-	"time"
+	"server/jobs/workspace"
 )
 
 type StudioManager struct {
@@ -18,6 +17,5 @@ func NewStudioManager(workspace *workspace.Workspace) *StudioManager {
 
 // Comment
 func (ctx *StudioManager) Work() {
-	for range time.Tick(time.Minute * 10) {
-	}
+
 }

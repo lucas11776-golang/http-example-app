@@ -1,8 +1,8 @@
 package manager
 
 import (
-	"server/jobs/office/workspace"
-	"time"
+	"context"
+	"server/jobs/workspace"
 )
 
 type OperationManager struct {
@@ -17,7 +17,5 @@ func NewOperationManager(workspace *workspace.Workspace) *OperationManager {
 }
 
 // Comment
-func (ctx *OperationManager) Work() {
-	for range time.Tick(time.Minute * 10) {
-	}
+func (ctx *OperationManager) Work(context context.Context) {
 }
