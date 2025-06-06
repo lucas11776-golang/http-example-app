@@ -59,8 +59,26 @@ func (ctx *SeniorAnalyst) verifiedUnverifiedArticles(context context.Context) {
 }
 
 // Comment
-func (ctx *SeniorAnalyst) ResearchArticles(context context.Context, intrest []string) ([]*analyst.ArticleVerified, error) {
-	return nil, nil
+func (ctx *SeniorAnalyst) ResearchArticles(context context.Context, interest []string) ([]*analyst.ArticleVerified, error) {
+	unverifiedArticles, err := ctx.workspace.JuniorAnalyst.ResearchArticles(context, interest)
+
+	if err != nil {
+		return nil, err
+	}
+
+	verifiedArticles := []*analyst.ArticleVerified{}
+
+	for _, unverifiedArticle := range unverifiedArticles {
+		verifiedArticle, err := ctx.VerifiedArticle(context, unverifiedArticle)
+
+		if err != nil {
+			continue
+		}
+
+		verifiedArticles = append(verifiedArticles, verifiedArticle)
+	}
+
+	return verifiedArticles, nil
 }
 
 // Comment
@@ -86,26 +104,20 @@ func (ctx *SeniorAnalyst) createSources(article *analyst.ArticleVerified, source
 }
 
 // Comment
-func (ctx *SeniorAnalyst) createVerifiedArticle(article map[string]interface{}) (*analyst.ArticleVerified, error) {
-	verified, err := orm.Model(analyst.ArticleVerified{}).
-		Insert(orm.Values{
-			"article_capture_id": article["article_capture_id"],
-			"rating":             article["rating"],
-			"title":              article["title"],
-			"description":        article["description"],
-			"content":            article["content"],
-			"html":               article["html"],
-		})
+func (ctx *SeniorAnalyst) createVerifiedArticle(unverifiedArticle *analyst.ArticleCapture, verifiedArticle orm.Values) (*analyst.ArticleVerified, error) {
+	verifiedArticle["article_capture_id"] = unverifiedArticle.ID
+
+	verified, err := orm.Model(analyst.ArticleVerified{}).Insert(verifiedArticle)
 
 	if err != nil {
 		return nil, err
 	}
 
-	if trusted, ok := article["trusted"].([]interface{}); ok {
+	if trusted, ok := verifiedArticle["trusted"].([]interface{}); ok {
 		verified.Trusted, _ = ctx.createSources(verified, trusted, true)
 	}
 
-	if trusted, ok := article["untrusted"].([]interface{}); ok {
+	if trusted, ok := verifiedArticle["untrusted"].([]interface{}); ok {
 		verified.Untrusted, _ = ctx.createSources(verified, trusted, false)
 	}
 
@@ -150,9 +162,7 @@ func (ctx *SeniorAnalyst) VerifiedArticle(context context.Context, article *anal
 		}
 	}
 
-	verification["article_capture_id"] = article.ID
-
-	verified, err = ctx.createVerifiedArticle(verification)
+	verified, err = ctx.createVerifiedArticle(article, verification)
 
 	if err != nil {
 		return nil, err
@@ -207,7 +217,7 @@ func (ctx *SeniorAnalyst) verifyArticle(context context.Context, article *analys
 		return nil, errors.New("something went wrong when trying to validate article")
 	}
 
-	var verification map[string]interface{}
+	var verification orm.Values
 
 	if err := json.Unmarshal([]byte(result), &verification); err != nil {
 		return nil, err

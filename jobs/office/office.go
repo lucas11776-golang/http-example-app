@@ -2,6 +2,7 @@ package office
 
 import (
 	"context"
+	"fmt"
 	"server/jobs/office/employees/analyst/junior"
 	"server/jobs/office/employees/analyst/senior"
 	"server/jobs/office/employees/designer"
@@ -28,7 +29,9 @@ func NewOffice() *Office {
 
 // Comment
 func (ctx *Office) Launch(context context.Context) {
-	ctx.duties(context)
+	// ctx.duties(context)
+
+	fmt.Println(ctx.workspace.SeniorAnalyst.ResearchArticles(context, []string{}))
 
 	// fmt.Println(ctx.workspace.JuniorAnalyst.ResearchArticles(context, []string{}))
 

@@ -5,6 +5,7 @@ import (
 	"server/jobs/workspace"
 )
 
+// TODO: Operation manager will deal with client interests
 type OperationManager struct {
 	workspace *workspace.Workspace
 }
