@@ -3,6 +3,7 @@ package workspace
 import (
 	"server/env"
 	"server/jobs/office/employees"
+	"server/jobs/tools"
 	"server/utils/prompt"
 )
 
@@ -11,6 +12,7 @@ type Workspace struct {
 	SeniorAnalyst         employees.SeniorAnalyst
 	SeniorGraphicDesigner employees.SeniorGraphicDesigner
 	JuniorAnalyst         employees.JuniorAnalyst
+	Tools                 *tools.Tools
 	Prompt                *prompt.Prompt
 }
 
