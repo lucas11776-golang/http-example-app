@@ -122,7 +122,7 @@ func (ctx *JuniorAnalyst) ResearchArticles(context context.Context, intrest []st
 		return nil, err
 	}
 
-	result := utils.ResultFromPaperword(string(response.Text()))
+	result := utils.ResultFromPaperwork(string(response.Text()))
 
 	if result == "" {
 		return []*analyst.ArticleCapture{}, nil

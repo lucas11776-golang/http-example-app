@@ -64,14 +64,25 @@ func (ctx *SeniorAnalyst) ResearchArticles(context context.Context, intrest []st
 }
 
 // Comment
-func (ctx *SeniorAnalyst) createVerifiedArticleSource(article *analyst.ArticleVerified, source map[string]interface{}, trusted bool) (*analyst.ArticleVerifiedSource, error) {
-	return orm.Model(analyst.ArticleVerifiedSource{}).
-		Insert(orm.Values{
+func (ctx *SeniorAnalyst) createSources(article *analyst.ArticleVerified, sources []interface{}, trusted bool) ([]*analyst.ArticleVerifiedSource, error) {
+	values := []orm.Values{}
+
+	for _, source := range sources {
+		site, ok := source.(map[string]interface{})
+
+		if !ok {
+			continue
+		}
+
+		values = append(values, orm.Values{
 			"article_verified_id": article.ID,
-			"name":                source["name"],
-			"website":             source["website"],
+			"name":                site["name"],
+			"website":             site["website"],
 			"trusted":             trusted,
 		})
+	}
+
+	return orm.Model(analyst.ArticleVerifiedSource{}).InsertMany(values)
 }
 
 // Comment
@@ -90,26 +101,12 @@ func (ctx *SeniorAnalyst) createVerifiedArticle(article map[string]interface{}) 
 		return nil, err
 	}
 
-	for _, trusted := range article["trusted"].([]interface{}) {
-		source, err := ctx.createVerifiedArticleSource(verified, trusted.(map[string]interface{}), true)
-
-		if err != nil {
-			// Do something
-			continue
-		}
-
-		verified.Trusted = append(verified.Trusted, source)
+	if trusted, ok := article["trusted"].([]interface{}); ok {
+		verified.Trusted, _ = ctx.createSources(verified, trusted, true)
 	}
 
-	for _, untrusted := range article["untrusted"].([]interface{}) {
-		source, err := ctx.createVerifiedArticleSource(verified, untrusted.(map[string]interface{}), false)
-
-		if err != nil {
-			// Do something
-			continue
-		}
-
-		verified.Trusted = append(verified.Trusted, source)
+	if trusted, ok := article["untrusted"].([]interface{}); ok {
+		verified.Untrusted, _ = ctx.createSources(verified, trusted, false)
 	}
 
 	return verified, nil
@@ -123,7 +120,7 @@ func (ctx *SeniorAnalyst) VerifiedArticle(context context.Context, article *anal
 
 	if err != nil || verified != nil {
 		// TODO: Do something...
-		return verified, nil
+		return verified, nil // TODO: get sources...
 	}
 
 	if err := article.Verifying(time.Now()); err != nil {
@@ -204,10 +201,10 @@ func (ctx *SeniorAnalyst) verifyArticle(context context.Context, article *analys
 		return nil, err
 	}
 
-	result := utils.ResultFromPaperword(response.Text())
+	result := utils.ResultFromPaperwork(response.Text())
 
 	if result == "" {
-		return nil, errors.New("something went wrong when tring to validate article")
+		return nil, errors.New("something went wrong when trying to validate article")
 	}
 
 	var verification map[string]interface{}

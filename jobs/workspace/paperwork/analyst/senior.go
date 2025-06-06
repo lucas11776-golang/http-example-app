@@ -1,6 +1,8 @@
 package analyst
 
-import "time"
+import (
+	"time"
+)
 
 type ArticleVerifiedSource struct {
 	Connection        string    `connection:"sqlite" table:"article_verified_sources"`

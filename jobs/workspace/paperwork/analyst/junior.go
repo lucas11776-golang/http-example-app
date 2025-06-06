@@ -23,11 +23,12 @@ type ArticleCapture struct {
 }
 
 // Comment
-func (ctx *ArticleCapture) Verified(time time.Time) error {
-	return nil
+func (ctx *ArticleCapture) Verified(t time.Time) error {
+	return orm.Model(ArticleCapture{}).
+		Update(orm.Values{"verified_at": t.Format(time.DateTime)})
 }
 
-// Commet
+// Comment
 func (ctx *ArticleCapture) Verifying(t time.Time) error {
 	return orm.Model(ArticleCapture{}).
 		Update(orm.Values{"verification_at": t.Format(time.DateTime)})
