@@ -7,8 +7,8 @@ var (
 )
 
 // Comment
-func ResultFromPaperwork(document string) string {
-	result := PAPERWORK_RESULT_REGEX.FindStringSubmatch(document)
+func PaperworkResult(paperwork string) string {
+	result := PAPERWORK_RESULT_REGEX.FindStringSubmatch(paperwork)
 
 	if len(result) == 0 {
 		return ""

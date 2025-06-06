@@ -2,6 +2,7 @@ package designer
 
 import (
 	"context"
+	"fmt"
 	"server/jobs/workspace"
 	"server/jobs/workspace/paperwork/analyst"
 	"server/jobs/workspace/paperwork/designer"
@@ -20,9 +21,12 @@ func NewSeniorGraphicDesigner(workspace *workspace.Workspace) *SeniorGraphicDesi
 
 // Comment
 func (ctx *SeniorGraphicDesigner) Work(context context.Context) {
+	// Do some work
 }
 
 // Comment
-func (ctx *SeniorGraphicDesigner) DesignArticleImage(context context.Context, article analyst.ArticleVerified) (*designer.Image, error) {
+func (ctx *SeniorGraphicDesigner) DesignArticleImage(context context.Context, verifiedArticles *analyst.ArticleVerified) (*designer.Image, error) {
+	fmt.Println("Designing Article Image:", verifiedArticles)
+
 	return nil, nil
 }

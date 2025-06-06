@@ -33,8 +33,6 @@ func (ctx *Office) Launch(context context.Context) {
 
 	fmt.Println(ctx.workspace.SeniorAnalyst.ResearchArticles(context, []string{}))
 
-	// fmt.Println(ctx.workspace.JuniorAnalyst.ResearchArticles(context, []string{}))
-
 	for range time.Tick(time.Minute * 10) {
 		ctx.duties(context)
 	}

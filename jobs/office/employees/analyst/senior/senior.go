@@ -11,6 +11,7 @@ import (
 	"server/jobs/workspace"
 	"server/jobs/workspace/paperwork/analyst"
 	"server/utils/prompt"
+	"sync"
 	"time"
 
 	"github.com/lucas11776-golang/orm"
@@ -36,49 +37,63 @@ func (ctx *SeniorAnalyst) Work(context context.Context) {
 
 // Comme
 func (ctx *SeniorAnalyst) verifiedUnverifiedArticles(context context.Context) {
-	articles, err := ctx.workspace.JuniorAnalyst.UnverifiedArticles(context)
+	unverifiedArticles, err := ctx.workspace.JuniorAnalyst.UnverifiedArticles(context)
 
 	if err != nil {
 		return
 	}
 
-	verifiedArticles := []*analyst.ArticleVerified{}
+	verifiedArticles, err := ctx.verifyUnverifiedArticles(context, unverifiedArticles)
 
-	for _, article := range articles {
-		verified, err := ctx.VerifiedArticle(context, article)
-
-		if err != nil {
-			fmt.Println("ERROR", err)
-			continue
-		}
-
-		verifiedArticles = append(verifiedArticles, verified)
+	if err != nil {
+		return
 	}
 
-	fmt.Println(verifiedArticles)
+	_, err = ctx.workspace.OperationManager.PublishArticles(context, verifiedArticles)
+
+	if err != nil {
+		return
+	}
+}
+
+// Comment
+func (ctx *SeniorAnalyst) verifyUnverifiedArticles(context context.Context, unverifiedArticles []*analyst.ArticleCapture) ([]*analyst.ArticleVerified, error) {
+	verifiedArticles := []*analyst.ArticleVerified{}
+
+	var wg sync.WaitGroup
+
+	for _, unverifiedArticle := range unverifiedArticles {
+		wg.Add(1)
+
+		go func() {
+			if verifiedArticle, err := ctx.VerifiedArticle(context, unverifiedArticle); err == nil {
+				verifiedArticles = append(verifiedArticles, verifiedArticle)
+			} else {
+				fmt.Println("Error Verified Article:", err)
+			}
+
+			wg.Done()
+		}()
+	}
+
+	wg.Wait()
+
+	fmt.Println("VerifiedArticles:", len(verifiedArticles))
+
+	return verifiedArticles, nil
 }
 
 // Comment
 func (ctx *SeniorAnalyst) ResearchArticles(context context.Context, interest []string) ([]*analyst.ArticleVerified, error) {
 	unverifiedArticles, err := ctx.workspace.JuniorAnalyst.ResearchArticles(context, interest)
 
+	fmt.Println("UnverifiedArticles:", len(unverifiedArticles))
+
 	if err != nil {
 		return nil, err
 	}
 
-	verifiedArticles := []*analyst.ArticleVerified{}
-
-	for _, unverifiedArticle := range unverifiedArticles {
-		verifiedArticle, err := ctx.VerifiedArticle(context, unverifiedArticle)
-
-		if err != nil {
-			continue
-		}
-
-		verifiedArticles = append(verifiedArticles, verifiedArticle)
-	}
-
-	return verifiedArticles, nil
+	return ctx.verifyUnverifiedArticles(context, unverifiedArticles)
 }
 
 // Comment
@@ -105,9 +120,14 @@ func (ctx *SeniorAnalyst) createSources(article *analyst.ArticleVerified, source
 
 // Comment
 func (ctx *SeniorAnalyst) createVerifiedArticle(unverifiedArticle *analyst.ArticleCapture, verifiedArticle orm.Values) (*analyst.ArticleVerified, error) {
-	verifiedArticle["article_capture_id"] = unverifiedArticle.ID
-
-	verified, err := orm.Model(analyst.ArticleVerified{}).Insert(verifiedArticle)
+	verified, err := orm.Model(analyst.ArticleVerified{}).Insert(orm.Values{
+		"article_capture_id": unverifiedArticle.ID,
+		"rating":             verifiedArticle["rating"],
+		"title":              verifiedArticle["title"],
+		"description":        verifiedArticle["description"],
+		"content":            verifiedArticle["content"],
+		"html":               verifiedArticle["html"],
+	})
 
 	if err != nil {
 		return nil, err
@@ -211,7 +231,7 @@ func (ctx *SeniorAnalyst) verifyArticle(context context.Context, article *analys
 		return nil, err
 	}
 
-	result := utils.ResultFromPaperwork(response.Text())
+	result := utils.PaperworkResult(response.Text())
 
 	if result == "" {
 		return nil, errors.New("something went wrong when trying to validate article")

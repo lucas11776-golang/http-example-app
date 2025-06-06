@@ -7,6 +7,7 @@ import (
 	"server/jobs/office/utils"
 	"server/jobs/workspace"
 	"server/jobs/workspace/paperwork/analyst"
+	"server/utils/prompt"
 	"time"
 
 	"github.com/lucas11776-golang/orm"
@@ -70,35 +71,16 @@ func (ctx *JuniorAnalyst) ResearchArticles(context context.Context, interest []s
 		return nil, err
 	}
 
-	ask := `
-	You are an analyst working for a company that analyses the web for news based on client descriptions.
-	Your job is to find those news articles on the web, and they will be submitted to your senior analyst for review and approval.
-	Remember the client depends on those news articles for their daily operations.
-	Below are are bullet points of what the client wants:
+	prompt, err := ctx.workspace.Prompt.Generate("analyst.junior.research-article", prompt.PromptData{"interest": &interest})
 
-	- News must the the latest current date is 05 June 2025.
-	- News must be in South Africa.
-	- Use news site from South Africa.
-	- Get at least 50 article but if the are not that interesting exclude them.
-
-	After you are done analyzing the news article data please format the articles in JSON object in array containing the following interface and
-	place the data inside <result><result> also do not include ` + "```json ``` in results." + `
-
-	interface Article {
-		title: string;        // Article tile.
-		category: string;     // Article category pick on based on article - (General,Business,Politics,Science,Health,Entertainment,Sport,Technology,Finance)
-		website: string;      // Article url/source only website host.
-		description: string;  // Short description of article.
-		image: string;        // Article image please do not make up one if you can not find it leave it empty.
-		publisher: string;    // Article publisher
-		published_at: string; // Article published at format YYYY-DD-MM.
-		content: string;      // Article content (must be text).
-	}`
+	if err != nil {
+		return nil, err
+	}
 
 	content := []*genai.Content{
 		{
 			Parts: []*genai.Part{
-				{Text: ask},
+				{Text: prompt},
 			},
 			Role: genai.RoleUser,
 		},
@@ -122,7 +104,7 @@ func (ctx *JuniorAnalyst) ResearchArticles(context context.Context, interest []s
 		return nil, err
 	}
 
-	result := utils.ResultFromPaperwork(string(response.Text()))
+	result := utils.PaperworkResult(string(response.Text()))
 
 	if result == "" {
 		return []*analyst.ArticleCapture{}, nil
